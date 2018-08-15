@@ -63,3 +63,16 @@ ul li:checked
 }
 
 /* Add a "Checked" Mark when clicked on */
+ul li.checked::before
+{
+    content:'';
+    position:absolute;
+    border-color: brown;
+    border-style:groove;
+    border-width:thin;
+    top:10px;
+    left:15px;
+    transform:rotate(90deg);
+    height:15px;
+    width:7px;
+}

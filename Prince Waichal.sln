@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console App 1.0", "Console App 1.0\Console App 1.0.csproj", "{D9C14F57-10AE-47EA-842E-DD47C1D4528B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arithmatic Operators", "Arithmatic Operators\Arithmatic Operators.csproj", "{16A8B14E-2432-44A3-94F4-A183BD814478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D9C14F57-10AE-47EA-842E-DD47C1D4528B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C14F57-10AE-47EA-842E-DD47C1D4528B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C14F57-10AE-47EA-842E-DD47C1D4528B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16A8B14E-2432-44A3-94F4-A183BD814478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A8B14E-2432-44A3-94F4-A183BD814478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A8B14E-2432-44A3-94F4-A183BD814478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A8B14E-2432-44A3-94F4-A183BD814478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

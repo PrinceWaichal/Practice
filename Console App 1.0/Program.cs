@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Arithmatic_Operators;
 
 namespace Console_App_1._0
 {
@@ -25,81 +26,6 @@ namespace Console_App_1._0
 
         }
       
-        public static void Add()
-            // Function for Addition of Two Integers
-        {
-            Console.Clear();
-            Console.WriteLine("\nFunction for Addition of Two Integers\n");
-            long total, n1, n2;
-            Console.WriteLine("Enter a Integer : ");
-            n1 = Convert.ToInt64(Console.ReadLine());
-            Console.WriteLine("\nEnter another Integer : ");
-            n2 = Convert.ToInt64(Console.ReadLine());
-            total = n1 + n2;
-            Console.WriteLine("Addition of Entered Digits is : {0}", total.ToString());
-            Console.ReadLine();
-        }
-
-        public static void Sub()
-            // Function for Substraction of two integers
-        {
-            Console.Clear();
-            Console.WriteLine("\nFunction for Substraction of two integers \n");
-            long total, n1, n2;
-            Console.WriteLine("Enter a Integer : ");
-            n1 = Convert.ToInt64(Console.ReadLine());
-            Console.WriteLine("\nEnter another Integer : ");
-            n2 = Convert.ToInt64(Console.ReadLine());
-            total = n1 - n2;
-            Console.WriteLine("Subtraction of Entered Digits is : {0}", total.ToString());
-            Console.ReadLine();
-        }
- 
-        public static void Multiply()
-            // Function for Multiplication of Two numbers with two decimal places
-        {
-            Console.Clear();
-            Console.WriteLine("\nFunction for Multiplication of Two numbers with two decimal places:\n");
-            double total, n1, n2;
-            Console.WriteLine("Enter a Number With Two Decimals : ");
-            n1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter another Number with Two Decimals : ");
-            n2 = Convert.ToDouble(Console.ReadLine());
-            total = n1 * n2;
-            Console.WriteLine("Multiplication of Entered Numbers is : {0}", total.ToString());
-            Console.ReadLine();
-        }
-
-        public static void Division()
-            // Function for division of Two numbers with two decimal places
-        {
-            Console.Clear();
-            Console.WriteLine("\nFunction for division of Two numbers with two decimal places\n");
-            double total, n1, n2;
-            Console.WriteLine("Enter a Number With Two Decimals : ");
-            n1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter another Number with Two Decimals : ");
-            n2 = Convert.ToDouble(Console.ReadLine());
-            total = n1 / n2;
-            Console.WriteLine("Division of Entered Numbers is : {0}", total.ToString());
-            Console.ReadLine();
-        }      
-
-        public static void Modulus()
-        //Function to get the remainder of the division
-        {
-            Console.Clear();
-            Console.WriteLine("\nFunction to get ramainder of the division\n");
-            int total, n1, n2;
-            Console.WriteLine("\nEnter Number One ");
-            n1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nEnter Number Two ");
-            n2 = Convert.ToInt32(Console.ReadLine());
-            total = n1 % n2;
-            Console.WriteLine("Remainder of {0} and {1} is {2}",n1.ToString(),n2.ToString(),total.ToString());
-            Console.ReadLine();
-        }
-
         public static void Student()
             // Student Percentage Calculation
         {
@@ -143,12 +69,11 @@ namespace Console_App_1._0
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Addition of Two Numbers\n\n2. Subtraction of Two Numbers");
-            Console.WriteLine("\n3. Multiplication of Two Numbers\n\n4. Division of Two Numbers");
-            Console.WriteLine("\n5. Area of a Circle\n\n6. Percentage of a Student");
-            Console.WriteLine("\n7. Remainder");
+            Console.WriteLine("\n1. Arithmatic Operators");
+            //Console.WriteLine("\n3. Multiplication of Two Numbers\n\n4. Division of Two Numbers");
+            Console.WriteLine("\n2. Area of a Circle\n\n3. Percentage of a Student");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
-            
+
             //Accepting a normal string
             string b = Console.ReadLine();
             int d;
@@ -159,27 +84,17 @@ namespace Console_App_1._0
             switch (d)
             {
                 case 1:
-                    Add();
-                    break;
-                case 2:
-                    Sub();
-                    break;
-                case 3:
-                    Multiply();
-                    break;
-                case 4:
-                    Division();
-                    break;
-                case 5:
-                    Area();
-                    break;
-                case 6:
-                    Student();
-                    break;
-                case 7:
-                    Modulus();
+                    Arithmatic_Operators.Class1.Main();
                     break;
 
+                case 2:
+                    Area();
+                    break;
+
+                case 3:
+                    Student();
+                    break;
+                
                 default:
                     Console.WriteLine("\n\nWhat you wish to do?\na. Continue the Program\n\nb. Exit the Program");
                     char c = Convert.ToChar(Console.ReadLine());
