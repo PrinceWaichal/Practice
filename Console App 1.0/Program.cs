@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Arithmatic_Operators;
+using Relational_Operators;
 
 namespace Console_App_1._0
 {
@@ -69,34 +70,32 @@ namespace Console_App_1._0
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Arithmatic Operators");
-            //Console.WriteLine("\n3. Multiplication of Two Numbers\n\n4. Division of Two Numbers");
-            Console.WriteLine("\n2. Area of a Circle\n\n3. Percentage of a Student");
+            Console.WriteLine("\n1. Arithmatic Operators\n2.Relational Operators\nMiscellaneous Projects");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
-            string b = Console.ReadLine();
-            int d;
+            string userinput = Console.ReadLine();
+            int convertedint;
             // Following converts string into an integer
-            Int32.TryParse(b, out d);
+            Int32.TryParse(userinput, out convertedint);
 
             //Following code is used to create menu-driven program
-            switch (d)
+            switch (convertedint)
             {
                 case 1:
                     Arithmatic_Operators.Class1.Main();
                     break;
 
                 case 2:
-                    Area();
+                    
                     break;
 
                 case 3:
-                    Student();
+                    ;
                     break;
                 
                 default:
-                    Console.WriteLine("\n\nWhat you wish to do?\na. Continue the Program\n\nb. Exit the Program");
+                    Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
                     char c = Convert.ToChar(Console.ReadLine());
                     if(c=='a'||c=='A')
                     {

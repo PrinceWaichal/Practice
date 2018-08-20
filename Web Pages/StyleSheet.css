@@ -76,3 +76,12 @@ ul li.checked::before
     height:15px;
     width:7px;
 }
+
+/* Styling the close button */
+
+.close
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+}

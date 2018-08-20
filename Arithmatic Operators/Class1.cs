@@ -99,10 +99,11 @@ namespace Arithmatic_Operators
 
         public static void Main()
         {
+            Console.Clear();
             Console.WriteLine("\n\n\t\tPractical Number ");
             Console.WriteLine("\n\n\t Arithmatic Operators");
             Console.WriteLine("\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division");
-            Console.WriteLine("\n5. Modulus or Remainder\n6. Increment & Decrement");
+            Console.WriteLine("5. Modulus or Remainder\n6. Increment & Decrement");
             string userinput = Console.ReadLine();
             int a;
             Int32.TryParse(userinput, out a);
