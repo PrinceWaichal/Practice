@@ -83,11 +83,11 @@ namespace Console_App_1._0
             switch (convertedint)
             {
                 case 1:
-                    Arithmatic_Operators.Class1.Main();
+                    Arithmatic_Operators.Arit_Op.Main();
                     break;
 
                 case 2:
-                    
+                    Relational_Operators.Rel_Op.Main();
                     break;
 
                 case 3:

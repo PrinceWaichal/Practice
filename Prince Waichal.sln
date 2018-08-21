@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arithmatic Operators", "Ari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relational Operators", "Relational Operators\Relational Operators.csproj", "{A4D80A02-264B-477B-89A1-0AFB88BF8C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operators", "Operators\Operators.csproj", "{576BA870-E958-4851-A383-58B287576AD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A4D80A02-264B-477B-89A1-0AFB88BF8C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4D80A02-264B-477B-89A1-0AFB88BF8C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4D80A02-264B-477B-89A1-0AFB88BF8C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576BA870-E958-4851-A383-58B287576AD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576BA870-E958-4851-A383-58B287576AD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576BA870-E958-4851-A383-58B287576AD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576BA870-E958-4851-A383-58B287576AD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

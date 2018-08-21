@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Arithmatic_Operators
 {
-    public class Class1
+    public class Arit_Op
     {
         public static void Add()
         // Function for Addition of Two Integers
