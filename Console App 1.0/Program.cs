@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Arithmatic_Operators;
-using Relational_Operators;
+using Operators;
 
 namespace Console_App_1._0
 {
@@ -70,7 +69,7 @@ namespace Console_App_1._0
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Arithmatic Operators\n2.Relational Operators\nMiscellaneous Projects");
+            Console.WriteLine("\n1. Operators\n2. Add\n3. Add");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
@@ -83,11 +82,12 @@ namespace Console_App_1._0
             switch (convertedint)
             {
                 case 1:
-                    Arithmatic_Operators.Arit_Op.Main();
-                    break;
+                    //Following statement acts as "Console.Function"
+                    Operators.Ops.Main();
+                    break; // States that the first case is finished. If removed, gives compile-time error
 
                 case 2:
-                    Relational_Operators.Rel_Op.Main();
+                    ;
                     break;
 
                 case 3:
@@ -99,6 +99,7 @@ namespace Console_App_1._0
                     char c = Convert.ToChar(Console.ReadLine());
                     if(c=='a'||c=='A')
                     {
+                        // Redirects the control back to the start of the Main() method of the project
                         Main();
                     }
                     else

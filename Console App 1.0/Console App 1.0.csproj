@@ -52,6 +52,10 @@
       <Project>{16a8b14e-2432-44a3-94f4-a183bd814478}</Project>
       <Name>Arithmatic Operators</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Operators\Operators.csproj">
+      <Project>{576ba870-e958-4851-a383-58b287576ad5}</Project>
+      <Name>Operators</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Relational Operators\Relational Operators.csproj">
       <Project>{a4d80a02-264b-477b-89a1-0afb88bf8c31}</Project>
       <Name>Relational Operators</Name>
