@@ -328,9 +328,14 @@ namespace Primary
                         break;
 
                     default:
-                        if(num>0 && num<=10)
-                            _Console.WriteLine("\n\n\tPlease Select an Appropriate Option.");
-
+                        if (num > 0 && num <= 10)
+                        {
+                            Console.WriteLine("\n\n\tPlease Select an Appropriate Option.");
+                            Console.ReadLine();
+                            Main();
+                        }
+                        else
+                            Exit();
                         break;
                 }
             }
