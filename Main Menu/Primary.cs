@@ -14,7 +14,7 @@ namespace Primary
             Console.Clear();
             Console.WriteLine("\nYou are about the exit the program, do you wish to continue?\n\tYes\n\tNo");
             string str1 = Console.ReadLine();
-            if(str1==""||str1=="yes"||str1=="Yes"||str1=="YES")
+            if (str1 == "" || str1 == "yes" || str1 == "Yes" || str1 == "YES")
             {
                 Environment.Exit(0);
             }
@@ -32,7 +32,7 @@ namespace Primary
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Operators\n2. Add\n3. Add");
+            Console.WriteLine("\n1. Operators\n2. Branching & Looping Statements\n3. Add");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
@@ -49,7 +49,7 @@ namespace Primary
                     break; // States that the first case is finished. If removed, gives compile-time error
 
                 case 2:
-                    ;
+                    BrooP.Main();
                     break;
 
                 case 3:
@@ -191,7 +191,7 @@ namespace Primary
             // Function to Ask to Exit the Console
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Really Wish To Exit?\n\nY/N?");
+                Console.WriteLine("\nDo You Really Wish to Exit Arithmetic Operators?\n\nY/N?");
                 string a = Console.ReadLine();
                 if (a == "Y" | a == "y" | a == "Yes" | a == "yes" | a == "YES" | a == "yEs" | a == "yeS" | a == "")
                 {
@@ -263,30 +263,127 @@ namespace Primary
                  * 
                  * Returning the controller back to Main() as always
                  */
+                Console.Clear();
+                Console.WriteLine("\n\t\tAddition Assignment Operator");
+                Console.WriteLine("\nEnter any number");
+                string usernum1 = Console.ReadLine();
+                Console.WriteLine("\nEnter a number by which the previous number is to be incremented");
+                string usernum2 = Console.ReadLine();
+                Console.WriteLine("\nEnter, how many number of times \n\tthe second input number is to be added to the first");
+                string usernum3 = Console.ReadLine();
+
+                // Following convert the string input into the number format
+                double num1, num2, num3, num4, num5; // num5 variable is taken for the purpose of loop
+                double.TryParse(usernum1, out num1);
+                double.TryParse(usernum2, out num2);
+                double.TryParse(usernum3, out num3);
+                num4 = num1;
+
+                for (num5 = 1; num5 <= 3; num5++)
+                {
+                    num1 += num2;
+                }
+
+                Console.WriteLine("\nEntered number was {0}, you requested \nto increase the {0} by {1} number and by {2} times", num4.ToString(), num2.ToString(), num3.ToString());
+                Console.WriteLine("Henceforth, after assignment operation, the result is " + num1.ToString());
+                Console.ReadLine();
+                Main();
             }
 
             // Using "-="
             public static void Sub()
             {
+                Console.Clear();
+                Console.WriteLine("\n\t\tSubtraction Assignment Operator");
+                Console.WriteLine("\nEnter any number");
+                string usernum1 = Console.ReadLine();
+                Console.WriteLine("\nEnter a number by which the previous number is to be subtracted");
+                string usernum2 = Console.ReadLine();
+                Console.WriteLine("\nEnter, how many number of times \n\tthe second input number is to be subtracted from the first");
+                string usernum3 = Console.ReadLine();
 
+                // Following convert the string input into the number format
+                double num1, num2, num3, num4, num5; // num5 variable is taken for the purpose of loop
+                double.TryParse(usernum1, out num1);
+                double.TryParse(usernum2, out num2);
+                double.TryParse(usernum3, out num3);
+                num4 = num1;
+
+                for (num5 = 1; num5 <= 3; num5++)
+                {
+                    num1 -= num2;
+                }
+
+                Console.WriteLine("\nEntered number was {0}, you requested \nto subtract the {0} by {1} number and by {2} times", num4.ToString(), num2.ToString(), num3.ToString());
+                Console.WriteLine("Henceforth, after assignment operation, the result is " + num1.ToString());
+                Console.ReadLine();
+                Main();
             }
 
             // Using "*="
             public static void Mul()
             {
+                Console.Clear();
+                Console.WriteLine("\n\t\tMultiplication Assignment Operator");
+                Console.WriteLine("\nEnter any number");
+                string usernum1 = Console.ReadLine();
+                Console.WriteLine("\nEnter a number by which the previous number is to be multiplied");
+                string usernum2 = Console.ReadLine();
+                Console.WriteLine("\nEnter, how many number of times \n\tthe second input number is to be multiplied with the first");
+                string usernum3 = Console.ReadLine();
 
+                // Following convert the string input into the number format
+                double num1, num2, num3, num4, num5; // num5 variable is taken for the purpose of loop
+                double.TryParse(usernum1, out num1);
+                double.TryParse(usernum2, out num2);
+                double.TryParse(usernum3, out num3);
+                num4 = num1;
+
+                for (num5 = 1; num5 <= 3; num5++)
+                {
+                    num1 *= num2;
+                }
+
+                Console.WriteLine("\nEntered number was {0}, you requested \nto multiply the {0} by {1} number and by {2} times", num4.ToString(), num2.ToString(), num3.ToString());
+                Console.WriteLine("Henceforth, after assignment operation, the result is " + num1.ToString());
+                Console.ReadLine();
+                Main();
             }
 
             // Using "/="
             public static void Div()
             {
+                Console.Clear();
+                Console.WriteLine("\n\t\tDivision Assignment Operator");
+                Console.WriteLine("\nEnter any number");
+                string usernum1 = Console.ReadLine();
+                Console.WriteLine("\nEnter a number by which the previous number is to be divided");
+                string usernum2 = Console.ReadLine();
+                Console.WriteLine("\nEnter, how many number of times \n\tthe second input number is to be divided to the first");
+                string usernum3 = Console.ReadLine();
 
+                // Following convert the string input into the number format
+                double num1, num2, num3, num4, num5; // num5 variable is taken for the purpose of loop
+                double.TryParse(usernum1, out num1);
+                double.TryParse(usernum2, out num2);
+                double.TryParse(usernum3, out num3);
+                num4 = num1;
+
+                for (num5 = 1; num5 <= 3; num5++)
+                {
+                    num1 /= num2;
+                }
+
+                Console.WriteLine("\nEntered number was {0}, you requested \nto divide the {0} by {1} number and by {2} times", num4.ToString(), num2.ToString(), num3.ToString());
+                Console.WriteLine("Henceforth, after assignment operation, the result is " + num1.ToString());
+                Console.ReadLine();
+                Main();
             }
 
             // Standard (Copy-Pasted) Exit class
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Really Wish To Exit?\n\nY/N?");
+                Console.WriteLine("\nDo You Really Wish To Exit Assignment Operations?\n\nY/N?");
                 string a = Console.ReadLine();
                 if (a == "Y" | a == "y" | a == "Yes" | a == "yes" | a == "YES" | a == "yEs" | a == "yeS")
                 // Addition in above conditions (possible inputs) welcomed.
@@ -304,7 +401,7 @@ namespace Primary
                 Console.Clear();
                 Console.WriteLine("\n\tPlease Select any of the following assignment operation");
                 Console.WriteLine("\n1. Addition '+' Assignmen\n2. Subtraction '-' Assignment");
-                Console.WriteLine("3.  Multiplication '*' Assignment\n4. Division '/' Assignment");
+                Console.WriteLine("3. Multiplication '*' Assignment\n4. Division '/' Assignment");
                 string UI = Console.ReadLine();
                 int num;
                 Int32.TryParse(UI, out num);
@@ -343,25 +440,209 @@ namespace Primary
 
         public class Rel_Ops
         {
+            // Copy - Pasted Exit Code
+            public static void Exit()
+            {
+                Console.WriteLine("\nDo You Really Wish to Exit Arithmetic Operators?\n\nY/N?");
+                string a = Console.ReadLine();
+                if (a == "Y" | a == "y" | a == "Yes" | a == "yes" | a == "YES" | a == "yEs" | a == "yeS" | a == "")
+                {
+                    Ops.Main();
+                }
+                else
+                {
+                    Main();
+                }
+            }
+
             public static void Main()
             {
+                /*
+                 * Use following of the relational operators
+                 * 
+                 * <
+                 * >
+                 * <=
+                 * >=
+                 * 
+                 */
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tRelational Operators");
 
+                Console.WriteLine("\nEnter Number 1 = ");
+                string userinput1 = Console.ReadLine();
+
+                Console.WriteLine("\nEnter Number 2 = ");
+                string userinput2 = Console.ReadLine();
+                
+                
+                double num1, num2;
+                Double.TryParse(userinput1, out num1);
+                Double.TryParse(userinput2, out num2);
+
+                if (num1>num2)
+                {
+                    Console.WriteLine("{0} is greater than {1}",num1.ToString(),num2.ToString());
+                }
+
+                else if (num1<num2)
+                {
+                    Console.WriteLine("{1} is greater than {0}", num1.ToString(), num2.ToString());
+                }
+
+                else if (num1==num2)
+                {
+                    Console.WriteLine("\nBoth of the entered numbers are equal.");
+                }
+
+                else
+                {
+                    Exit();
+                }
+                    
             }
         }
 
         public class Log_Ops
         {
+            // Copy - Pasted Exit Code
+            public static void Exit()
+            {
+                Console.WriteLine("\nDo You Really Wish to Exit Arithmetic Operators?\n\nY/N?");
+                string a = Console.ReadLine();
+                if (a == "Y" | a == "y" | a == "Yes" | a == "yes" | a == "YES" | a == "yEs" | a == "yeS" | a == "")
+                {
+                    Ops.Main();
+                }
+                else
+                {
+                    Main();
+                }
+            }
+
             public static void Main()
             {
+                /*
+                 * Use following of the logical operators
+                 * 
+                 * &&
+                 * ||
+                 * !=
+                 * 
+                 */
 
+                Console.Clear();
+                Console.WriteLine("");
+                Console.WriteLine("");
+
+                Console.ReadLine();
             }
         }
 
         public class Bit_Ops
         {
-            public static void Main()
+            // Bitwise AND '&' Operator
+            public static void AND()
+            {
+                Console.Clear();
+                Console.WriteLine("");
+                Console.WriteLine("");
+                string userinput = Console.ReadLine();
+                
+            }
+
+            // Bitwise OR '|' Operator
+            public static void OR()
             {
 
+            }
+
+            // Bitwise XOR '^' Operator
+            public static void XOR()
+            {
+
+            }
+
+
+            // Bitwise One's Complement '~' Operator
+            public static void OneComplement()
+            {
+
+            }
+
+            // Bitwise Left Shift '<<'Operator
+            public static void LeftShift()
+            {
+
+            }
+
+            // Bitwise Right Shift '>>' Operator
+            public static void RightShift()
+            {
+
+            }
+
+            public static void Main()
+            {
+                /*
+                 * Use following BitWise Operators
+                 * 
+                 * & Binary AND
+                 * | Binary OR
+                 * ^ Binary XOR
+                 * ~ Binary Ones Complement Operator
+                 * << Binary Left Shift Operator
+                 * >> Binary Right Shift Operator
+                 * 
+                 */
+
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tBit Operators");
+                Console.WriteLine("\nPlease Select Any of the following :");
+                Console.WriteLine("\n\t1.AND [&] Operator\t\t2. OR [|] Operator\n\t3. XOR [^] Operator\t\t4. One's Complement [~] Operator");
+                Console.WriteLine("\n\t5. Left Shift [<<] Operator\t\t6. Right Shift [>>] Operator");
+
+                string one = Console.ReadLine();
+                int number;
+                Int32.TryParse(one, out number);
+
+                switch (number)
+                {
+                    case 1:
+                        AND();
+                        break;
+
+                    case 2:
+                        OR();
+                        break;
+
+                    case 3:
+                        XOR();
+                        break;
+
+                    case 4:
+                        OneComplement();
+                        break;
+
+                    case 5:
+                        LeftShift();
+                        break;
+
+                    case 6:
+                        RightShift();
+                        break;
+
+                    default:
+                        if (number > 0 && number <= 10)
+                        {
+                            Console.WriteLine("Please select an appropriate option");
+                            Console.ReadLine();
+                            Main();
+                        }
+                        else
+                            Exit();
+                        break;
+                }
             }
         }
 
@@ -421,6 +702,31 @@ namespace Primary
                     break;
             }
         }
+    }
 
+// <---------------------------------------------************************************************************-------------------------------------------->
+
+    public class BrooP
+    {
+        public class Branching
+        {
+
+        }
+
+        public class Loops
+        {
+
+        }
+
+        public static void Exit()
+        {
+
+        }
+
+        public static void Main()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+        }
     }
 }

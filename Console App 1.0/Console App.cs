@@ -47,6 +47,10 @@ namespace Console_App
         public static void Main()
         {
             Primary.Menu.Main();
+            Console.Clear();
+            Console.WriteLine("\nControl is Back in Main CS Filed");
+            Console.ReadLine();
+
         }
     }
 }
