@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Main_Console_Application
 {
-    class Program
+    class Main_Program
     {
-        static void Main()
+        static void Main()  
         {
             Project_Library.Projects.Menu.Main();
             Console.WriteLine("\nControl has been returned to the Console Application.");
