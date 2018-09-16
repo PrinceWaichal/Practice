@@ -1330,12 +1330,72 @@ namespace Project_Library
             Main();
         }
 
+        public static void OddEven()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tOdd Even Number Program");
+            Console.Write("\nEnter Any Number : ");
+            double input1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("\nEnter Any Number : ");
+            double input2 = Convert.ToDouble(Console.ReadLine());
+
+            double num1 = input1, num2 = input2;        // For Looping Purpose
+
+            if (input1 > input2)
+            {
+                Console.Write("\nEven Numbers = ");
+                do
+                {
+                    if (input2 % 2 == 0)
+                        Console.Write("\t" + input2);
+                    input2++;
+                } while (input2 <= input1);
+
+                Console.Write("\nOdd Numbers = ");
+                do
+                {
+                    if (num2 % 2 != 0)
+                        Console.Write("\t" + num2);
+                    num2++;
+                } while (num2 <= input1);
+            }
+
+            else if (input2 > input1)
+            {
+                Console.Write("\nEven Numbers : ");
+                do
+                {
+                    if (input1 % 2 == 0)
+                        Console.Write("\t" + input1);
+                    input1++;
+                } while (input1 <= input2);
+
+                Console.Write("\nOdd Numbers : ");
+                do
+                {
+                    if (num1 % 2 != 0)
+                        Console.Write("\t" + num1);
+                    num1++;
+                } while (num1 <= input2);
+            }
+
+            else if (input1 == input2)
+                Console.WriteLine("\n\t\tEntered Numbers Are Same");
+
+            else
+                Console.Write("\n\t\t*****Wrong Input*****");
+
+            Console.ReadLine();
+            Main();
+        }
+
         public static void Main()
         {
             Console.Clear();
             Console.WriteLine("\nSelect Any of the Following Projects");
             Console.WriteLine("1. Percentage of Student\n2. Area of a Circle\n3. Number of Digits");
-            Console.WriteLine("4. Maximum Number\n5. Palindrome\n6. ");
+            Console.WriteLine("4. Maximum Number\n5. Palindrome\n6. Odd Even Numbers");
 
             string input = Console.ReadLine();
             int menunum;
@@ -1364,7 +1424,7 @@ namespace Project_Library
                     break;
 
                 case 6:
-                    ;
+                    OddEven();
                     break;
 
                 default:
