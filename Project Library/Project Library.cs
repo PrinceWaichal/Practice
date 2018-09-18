@@ -589,9 +589,11 @@ namespace Project_Library
 
                 else
                 {
+                    Console.ReadLine();
                     Exit();
                 }
-
+                Console.ReadLine();
+                Ops.Main();
             }
         }
         ;
@@ -630,10 +632,9 @@ namespace Project_Library
 
                 Console.Clear();
                 Console.WriteLine("\n\t\t\tLogical Operators");
-                Console.WriteLine("\nThis functions either adds or subtracts any input made");
-                Console.WriteLine("\nEnter Anything :");
+                Console.Write("\nEnter Any Number :");
                 string userinput = Console.ReadLine();
-                Console.WriteLine("\nEnter Something Else : ");
+                Console.Write("\nEnter Another Number : ");
                 string userinput1 = Console.ReadLine();
 
                 float num, num1;
@@ -642,18 +643,21 @@ namespace Project_Library
 
                 if (num > num1 && num != 0)
                 {
-                    Console.WriteLine("\n{0} is converted into {1} and is greater than {2}, a conversion of {3}", userinput, num.ToString(), num1.ToString(), userinput1);
+                    Console.WriteLine("\n{0} is greater than {1}", num.ToString(), num1.ToString());
                 }
 
                 else if (num < num1 || num1 != 0)
                 {
-                    Console.WriteLine("\n{0} is converted into {1} and is less than {2}, a conversion of {3}", userinput, num.ToString(), num1.ToString(), userinput1);
+                    Console.WriteLine("\n{0} and is less than {1}", num1.ToString(), num.ToString());
                 }
 
                 else
                 {
+                    Console.ReadLine();
                     Exit();
                 }
+                Console.ReadLine();
+                Ops.Main();
             }
         }
 
@@ -1174,6 +1178,23 @@ namespace Project_Library
 
     public class Misc_Proj
     {
+        public static void Arrays()
+        {
+            Console.Clear();
+            /*
+             * <===== foreach is used to display the array only not storing purpose =====>
+             * 
+             * int[] marks = newint[] {12,32,15,89};
+             * 
+             * foreach (intmaksin marks)
+             * 
+             * Console.Write("Elementsin array " + mks);
+             * 
+             */
+            Console.ReadLine();
+            Main();
+        }
+
         public static void Student()
         // Student Percentage Calculation
         {
@@ -1207,6 +1228,29 @@ namespace Project_Library
             double r = Convert.ToDouble(Console.ReadLine());
             double a = pi * r * r;
             Console.WriteLine("\nThe Radius given is {0} and the area of the circle therefore is\n{1}", r.ToString(), a.ToString());
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void ZPN()
+        {
+            Console.Clear();
+
+            Console.Write("\n\t\t\tRange of Number");
+            Console.Write("\nThis program verifies whether the number is positive, negative or zero");
+
+            Console.Write("\nEnter Any Number : ");
+            double input = Convert.ToDouble(Console.ReadLine());
+
+            if (input > 0)
+                Console.Write(input + " is in Positive Rnge");
+            else if (input < 0)
+                Console.Write(input + " is in Negative Range");
+            else if (input == 0)
+                Console.Write("\nEntered Number is Zero");
+            else
+                Console.Write("\n*****Wrong Input*****");
+
             Console.ReadLine();
             Main();
         }
@@ -1263,6 +1307,39 @@ namespace Project_Library
             else
             {
                 Console.Write("\nAll the entered numbers are equal");
+            }
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Prime()
+        {
+            Console.Clear();
+
+            Console.Write("\n\t\t\tPrime Number Prorgram");
+
+            Console.Write("\nEnter Any Number : ");
+            double input = Convert.ToDouble(Console.ReadLine());
+
+            int loop, counter = 0;
+
+            for (loop = 1; loop <= input; loop++)
+            {
+                if (input % 2 == 0)
+                {
+                    counter++;
+                }
+            }
+
+            if (counter == 2)
+            {
+                Console.Write("\n{0} is a Prime Number.", input.ToString());
+            }
+
+            else
+            {
+                Console.Write("\n{0} is NOT a Prime Number.", input.ToString());
             }
 
             Console.ReadLine();
@@ -1326,6 +1403,27 @@ namespace Project_Library
             }
             Console.Write("\nPalindrome of Your Input is as follows :");
             Console.Write(reverse);
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Fact()
+        {
+            Console.Clear();
+
+            Console.Write("\n\t\t\tFactorial of a Number");
+            Console.WriteLine("\n\n<===========Positive Integer Input Only===========>");
+
+            Console.Write("\nEnter any Number : ");
+            int number = Convert.ToInt32(Console.ReadLine()), result = 1;
+
+            for (int number1 = number; number1 >= 1; number1--)
+            {
+                 result = result * number1;
+            }
+
+            Console.Write("\nFactorial of {0} is {1}", number.ToString(), result.ToString());
+
             Console.ReadLine();
             Main();
         }
@@ -1395,7 +1493,8 @@ namespace Project_Library
             Console.Clear();
             Console.WriteLine("\nSelect Any of the Following Projects");
             Console.WriteLine("1. Percentage of Student\n2. Area of a Circle\n3. Number of Digits");
-            Console.WriteLine("4. Maximum Number\n5. Palindrome\n6. Odd Even Numbers");
+            Console.WriteLine("4. Maximum Number\n5. Palindrome\n6. Odd Even Numbers\n7. Prime Number");
+            Console.WriteLine("8. Range of a Number\n9. Factorial of a Number\n10. Arrays");
 
             string input = Console.ReadLine();
             int menunum;
@@ -1425,6 +1524,22 @@ namespace Project_Library
 
                 case 6:
                     OddEven();
+                    break;
+
+                case 7:
+                    Prime();
+                    break;
+
+                case 8:
+                    ZPN();
+                    break;
+
+                case 9:
+                    Fact();
+                    break;
+
+                case 10:
+                    Arrays();
                     break;
 
                 default:
