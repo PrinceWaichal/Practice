@@ -56,17 +56,7 @@ namespace Main_Console_Application
                     break;
 
                 default:
-                    Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
-                    string c = Console.ReadLine();
-                    if (c == "a" || c == "A")
-                    {
-                        // Redirects the control back to the start of the Main() method of the project
-                        Main();
-                    }
-                    else
-                    {
-                        Exit();
-                    }
+                    Exit();
                     break;
             }
             Main();

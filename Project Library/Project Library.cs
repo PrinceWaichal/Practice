@@ -123,15 +123,12 @@ namespace Project_Library
             // Function to Ask to Exit the Console
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    Ops.Main();
                 }
                 else
                 {
@@ -451,15 +448,12 @@ namespace Project_Library
             // Standard (Copy-Pasted) Exit class
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    Ops.Main();
                 }
                 else
                 {
@@ -532,15 +526,12 @@ namespace Project_Library
             // Copy - Pasted Exit Code
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    Ops.Main();
                 }
                 else
                 {
@@ -602,21 +593,17 @@ namespace Project_Library
             // Copy - Pasted Exit Code
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    Ops.Main();
                 }
                 else
                 {
                     Environment.Exit(0);
                 }
-
             }
 
             public static void Main()
@@ -666,21 +653,19 @@ namespace Project_Library
             // Copy-Pasted Exit Program
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    Ops.Main();
                 }
                 else
                 {
                     Environment.Exit(0);
                 }
             }
+
             // Bitwise AND '&' Operator
             public static void AND()
             {
@@ -867,10 +852,11 @@ namespace Project_Library
         // Function to return to main menu
         public static void Exit()
         {
-            Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Exit the Program");
-            string a = Console.ReadLine();
-            if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+            Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+            string c = Console.ReadLine();
+            if (c == "a" || c == "A")
             {
+                // Redirects the control back to the start of the Main() method of the project
                 ;
             }
             else
@@ -911,7 +897,6 @@ namespace Project_Library
                     break;
 
                 default:
-                    Console.WriteLine("\t\t\tKindly select an appropriate option");
                     Exit();
                     break;
             }
@@ -954,15 +939,12 @@ namespace Project_Library
 
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    BrooP.Main();
                 }
                 else
                 {
@@ -1011,14 +993,7 @@ namespace Project_Library
                         break;
 
                     default:
-                        if (number > 0 && number <= 10)
-                        {
-                            Console.WriteLine("Please select an appropriate option");
-                            Console.ReadLine();
-                            Main();
-                        }
-                        else
-                            Exit();
+                        Exit();
                         break;
                 }
             }
@@ -1028,15 +1003,12 @@ namespace Project_Library
         {
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    BrooP.Main();
                 }
                 else
                 {
@@ -1044,7 +1016,7 @@ namespace Project_Library
                 }
             }
 
-                public static void Main()
+            public static void Main()
             {
                 Console.Clear();
                 Console.WriteLine("\n\t\t\tLooping Statements Menu");
@@ -1067,14 +1039,7 @@ namespace Project_Library
                         break;
 
                     default:
-                        if (number > 0 && number <= 10)
-                        {
-                            Console.WriteLine("Please select an appropriate option");
-                            Console.ReadLine();
-                            Main();
-                        }
-                        else
-                            Exit();
+                        Exit();
                         break;
                 }
             }
@@ -1084,15 +1049,12 @@ namespace Project_Library
         {
             public static void Exit()
             {
-                Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-                string a = Console.ReadLine();
-                if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
                 {
+                    // Redirects the control back to the start of the Main() method of the project
                     ;
-                }
-                if (a == "B" | a == "b")
-                {
-                    BrooP.Main();
                 }
                 else
                 {
@@ -1112,15 +1074,12 @@ namespace Project_Library
 
         public static void Exit()
         {
-            Console.WriteLine("\nDo You Wish To \n\tA. Return to Main Menu\n\tB. Go Back to Operators Menu\n\tC. Exit the Program");
-            string a = Console.ReadLine();
-            if (a == "A" | a == "a" | a == "1" | a == "Return" | a == "Main Menu" | a == "Return to Main")
+            Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+            string c = Console.ReadLine();
+            if (c == "a" || c == "A")
             {
+                // Redirects the control back to the start of the Main() method of the project
                 ;
-            }
-            if (a == "B" | a == "b")
-            {
-                BrooP.Main();
             }
             else
             {
@@ -1154,17 +1113,7 @@ namespace Project_Library
                     break;
 
                 default:
-                    Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
-                    string c = Console.ReadLine();
-                    if (c == "a" || c == "A")
-                    {
-                        // Redirects the control back to the start of the Main() method of the project
-                        Main();
-                    }
-                    else
-                    {
-                        Exit();
-                    };
+                    Exit();
                     break;
             }
 
@@ -1178,22 +1127,41 @@ namespace Project_Library
 
     public class Misc_Proj
     {
+        public static void Exit()
+        {
+            Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+            string c = Console.ReadLine();
+            if (c == "a" || c == "A")
+            {
+                // Redirects the control back to the start of the Main() method of the project
+                ;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
         public class Arrays
         {
 
             public static void OneDArray()
             {
                 Console.Clear();
+
                 /*
                  * <===== foreach is used to display the array only not storing purpose =====>
                  * 
-                 * int[] marks = newint[] {12,32,15,89};
+                 * int[] marks = new int[] {12,32,15,89};
                  * 
-                 * foreach (intmaksin marks)
+                 * foreach (int maks in marks)
                  * 
                  * Console.Write("Elementsin array " + mks);
                  * 
                  */
+
+
+
                 Console.ReadLine();
                 Main();
             }
@@ -1201,6 +1169,37 @@ namespace Project_Library
             public static void TwoDArray()
             {
                 Console.Clear();
+
+                Console.WriteLine("\n\t\t\tTwo Dimensional Array");
+                Console.Write("\nEnter the number of rows in the array : ");
+                int row = Convert.ToInt32(Console.ReadLine());
+                Console.Write("\nEnter the number of columns in the array : ");
+                int column = Convert.ToInt32(Console.ReadLine());
+                
+                int[,] array1;
+                array1 = new int[row,column];
+
+                for(int i = 0; i < array1.Length; i++)
+                {
+                    ///Console.Write("\nEnter the {0}th Row Element : ", i);
+                    //array1[i, 0] = Console.ReadLine();
+
+                    for (int j = 0; j < array1.Length; j++)
+                    {
+                        //  Console.Write("\t& {0}th Column Element : ", j);
+                        //  array1[0,j] = Console.ReadLine();
+                        array1[i, j] = i * j;
+                    }
+                }
+
+                for (int i = 0; i < array1.Length; i++)
+                {
+                    Console.Write("\nArray Element at {0}th Row is : {1}", i, array1[i,0]);
+                    for (int j = 0; j < array1.Length; j++)
+                    {
+                        Console.Write("\t& the {0}th Column is : {1}",j,array1[0,j]);
+                    }
+                }
 
                 Console.ReadLine();
                 Main();
@@ -1243,6 +1242,33 @@ namespace Project_Library
             public static void Main()
             {
                 Console.Clear();
+
+                Console.Write("\n\t\t\tArray Program List");
+                Console.Write("\nPlease select any of the following : ");
+                Console.Write("\n1. One Dimensional Array\n2. Two Dimensional Array\n3. Jagged Array\n");
+
+                int input = Convert.ToInt32(Console.ReadLine());
+
+                switch(input)
+                {
+                    case 1:
+                        OneDArray();
+                        break;
+
+                    case 2:
+                        TwoDArray();
+                        break;
+
+                    case 3:
+                        JaggedArray();
+                        break;
+
+                    default:
+                        ;
+                        break;
+                }
+                Console.ReadLine();
+                Misc_Proj.Main();
             }
 
         }
@@ -1596,7 +1622,7 @@ namespace Project_Library
                     break;
 
                 default:
-                    ;
+                    Exit();
                     break;
             }
         }
