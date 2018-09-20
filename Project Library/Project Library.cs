@@ -1178,22 +1178,75 @@ namespace Project_Library
 
     public class Misc_Proj
     {
-        public static void Arrays()
+        public class Arrays
         {
-            Console.Clear();
-            /*
-             * <===== foreach is used to display the array only not storing purpose =====>
-             * 
-             * int[] marks = newint[] {12,32,15,89};
-             * 
-             * foreach (intmaksin marks)
-             * 
-             * Console.Write("Elementsin array " + mks);
-             * 
-             */
-            Console.ReadLine();
-            Main();
+
+            public static void OneDArray()
+            {
+                Console.Clear();
+                /*
+                 * <===== foreach is used to display the array only not storing purpose =====>
+                 * 
+                 * int[] marks = newint[] {12,32,15,89};
+                 * 
+                 * foreach (intmaksin marks)
+                 * 
+                 * Console.Write("Elementsin array " + mks);
+                 * 
+                 */
+                Console.ReadLine();
+                Main();
+            }
+
+            public static void TwoDArray()
+            {
+                Console.Clear();
+
+                Console.ReadLine();
+                Main();
+            }
+
+            public static void JaggedArray()
+            {
+                Console.Clear();
+                // Length is Property ; Rank is property
+                /*
+                 * int[] score1 = new int[3] {20, 50, 60};
+                 * int[] score2 = new int[5] {0, 50, 69, 45};
+                 * int[][] scoresheet = new int[2][] {{score1},{score2}};
+                 * for (int i = 0; i < scoresheet.Length; i++)
+                 *  {
+                 *      if(==0)
+                 *          {
+                 *              for (int j = 0; j< score1.Length; j++)
+                 *                 {
+                 *                      Console.Write("\nFirst Row of Array Element is " + socreshee
+                 *                 }
+                 *          }
+                 *      if(i==1)
+                 *          (
+                 *              for (int j = 0; j<score2.length; j++)
+                 *                  {
+                 *                      Console.Write("\nFirst Array  Element
+                 *                  }
+                 *          }
+                 *   }
+                 *  Console.Write("This program will now terminate");
+                 *  Console.ReadLine();
+                 *  Exit();   
+                 */
+
+                Console.ReadLine();
+                Main();
+            }
+
+            public static void Main()
+            {
+                Console.Clear();
+            }
+
         }
+
 
         public static void Student()
         // Student Percentage Calculation
@@ -1539,7 +1592,7 @@ namespace Project_Library
                     break;
 
                 case 10:
-                    Arrays();
+                    Arrays.Main();
                     break;
 
                 default:
