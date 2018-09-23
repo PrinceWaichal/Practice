@@ -1134,7 +1134,7 @@ namespace Project_Library
             if (c == "a" || c == "A")
             {
                 // Redirects the control back to the start of the Main() method of the project
-                ;
+                Misc_Proj.Main();
             }
             else
             {
@@ -1159,8 +1159,22 @@ namespace Project_Library
                  * Console.Write("Elementsin array " + mks);
                  * 
                  */
+                Console.WriteLine("\n\t\t\tOne Dimensional Array");
+                Console.Write("\nEnter the Number of Items which you would like to input : ");
+                int input = Convert.ToInt32(Console.ReadLine());
 
+                string[] array1 = new string[input];
 
+                for (int i = 0; i < array1.GetLength(0); i++)
+                {
+                    Console.Write("\nEnter the Item for {0}th Index Number : ", i);
+                    array1[i] = Console.ReadLine();
+                }
+                Console.WriteLine();
+                for (int i = 0; i < array1.GetLength(0); i++)
+                {
+                    Console.Write(array1[i]);
+                }
 
                 Console.ReadLine();
                 Main();
@@ -1176,28 +1190,26 @@ namespace Project_Library
                 Console.Write("\nEnter the number of columns in the array : ");
                 int column = Convert.ToInt32(Console.ReadLine());
                 
-                int[,] array1;
-                array1 = new int[row,column];
+                string[,] array1;
+                array1 = new string[row,column];
 
-                for(int i = 0; i < array1.Length; i++)
+                for(int i = 0; i < array1.GetLength(0); i++)
                 {
-                    ///Console.Write("\nEnter the {0}th Row Element : ", i);
-                    //array1[i, 0] = Console.ReadLine();
+                    Console.WriteLine("\nEnter the {0}th Row Element : ", i);
+                    array1[i, 0] = Console.ReadLine();
 
-                    for (int j = 0; j < array1.Length; j++)
+                    for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        //  Console.Write("\t& {0}th Column Element : ", j);
-                        //  array1[0,j] = Console.ReadLine();
-                        array1[i, j] = i * j;
+                        Console.Write("\t& {0}th Column Element : ", j);
+                        array1[0,j] = Console.ReadLine();
                     }
                 }
 
-                for (int i = 0; i < array1.Length; i++)
+                for (int i = 0; i < array1.GetLength(0); i++)
                 {
-                    Console.Write("\nArray Element at {0}th Row is : {1}", i, array1[i,0]);
-                    for (int j = 0; j < array1.Length; j++)
+                    for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write("\t& the {0}th Column is : {1}",j,array1[0,j]);
+                        Console.Write("\n{0}th Row & the {1}th Column Element  is : {2}",j,array1[i,j]);
                     }
                 }
 
@@ -1247,9 +1259,13 @@ namespace Project_Library
                 Console.Write("\nPlease select any of the following : ");
                 Console.Write("\n1. One Dimensional Array\n2. Two Dimensional Array\n3. Jagged Array\n");
 
-                int input = Convert.ToInt32(Console.ReadLine());
+                string input = Console.ReadLine();
 
-                switch(input)
+                int innum;
+
+                int.TryParse(input, out innum);
+
+                switch(innum)
                 {
                     case 1:
                         OneDArray();
@@ -1264,7 +1280,7 @@ namespace Project_Library
                         break;
 
                     default:
-                        ;
+                        Exit();
                         break;
                 }
                 Console.ReadLine();
