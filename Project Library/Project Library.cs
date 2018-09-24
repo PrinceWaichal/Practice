@@ -1189,11 +1189,11 @@ namespace Project_Library
                 int row = Convert.ToInt32(Console.ReadLine());
                 Console.Write("\nEnter the number of columns in the array : ");
                 int column = Convert.ToInt32(Console.ReadLine());
-                
-                string[,] array1;
-                array1 = new string[row,column];
 
-                for(int i = 0; i < array1.GetLength(0); i++)
+                string[,] array1;
+                array1 = new string[row, column];
+
+                for (int i = 0; i < array1.GetLength(0); i++)
                 {
                     Console.WriteLine("\nEnter the {0}th Row Element : ", i);
                     array1[i, 0] = Console.ReadLine();
@@ -1201,15 +1201,16 @@ namespace Project_Library
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
                         Console.Write("\t& {0}th Column Element : ", j);
-                        array1[0,j] = Console.ReadLine();
+                        array1[0, j] = Console.ReadLine();
                     }
                 }
 
                 for (int i = 0; i < array1.GetLength(0); i++)
                 {
+                    Console.WriteLine("\n{0}th Row Element is : {1}", i,array1[i,0]);
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write("\n{0}th Row & the {1}th Column Element  is : {2}",j,array1[i,j]);
+                        Console.Write("\n\t& {0}th Column Element is : {1}", j,array1[0,j]);
                     }
                 }
 
