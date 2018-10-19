@@ -9,47 +9,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="Prince Waichal.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="C:\Users\Prince\Desktop\Prince Waichal\New\material-design-icons-3.0.1\action\2x_web?Family=Material+Icons" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
 <body >
-	<style>
-		/* Tooltip Container*/
-		.tooltip 
-        {
-					position:relative;
-					display:inline-block;
-					align-content:center;
-		}
-		/* Tooltip Text */
-		.tooltip .tooltiptext 
-        {
-							visibility:hidden;
-							width:auto;
-							background-color:black;
-							color:white;
-							text-align:center;
-							font-family:Playball;
-							border-radius:10px;
-							position:absolute;
-							z-index:2;
-							width:140px;
-							bottom:-25px;
-							left:50px;
-							margin-left: -60px; 
-							opacity:80;							
-		}
-		/*On Hover Event Syntax*/
-		.tooltip:hover .tooltiptext 
-        {
-									visibility:visible;
-		}
-		p
-        {
-            color:hotpink;
-            background-color:lavender;
-		}
-	</style>
-	
+    <div ng-app="name">
+        <p>Name : <input type="text" ng-model="name" /></p>
+        <h1 ng-bind="name">Hello {{name}}</h1>
+    </div>
+
 	<h1 align="center"> Assignment 1 </h1>
 	<p align="center" id="demo"> 
 		Select Color Combination for this text. 

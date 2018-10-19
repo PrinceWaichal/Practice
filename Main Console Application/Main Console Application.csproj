@@ -50,12 +50,18 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Scripts\angular.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project Library\Project Library.csproj">
       <Project>{d6eebf3b-1ec9-4460-a7b8-fa8b16b750d3}</Project>
       <Name>Project Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
