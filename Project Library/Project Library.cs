@@ -1196,21 +1196,21 @@ namespace Project_Library
                 for (int i = 0; i < array1.GetLength(0); i++)
                 {
                     Console.WriteLine("\nEnter the {0}th Row Element : ", i);
-                    array1[i, 0] = Console.ReadLine();
+                    // array1[i, 0] = Console.ReadLine();
 
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
                         Console.Write("\t& {0}th Column Element : ", j);
-                        array1[0, j] = Console.ReadLine();
+                        array1[i, j] = Console.ReadLine();
                     }
                 }
 
                 for (int i = 0; i < array1.GetLength(0); i++)
                 {
-                    Console.WriteLine("\n{0}th Row Element is : {1}", i,array1[i,0]);
+                    // Console.WriteLine("\n{0}th Row Element is : {1}", i,array1[i,0]);
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write("\n\t& {0}th Column Element is : {1}", j,array1[0,j]);
+                        Console.Write("\n\t& {0}th Column Element is : {1}", j,array1[i,j]);
                     }
                 }
 

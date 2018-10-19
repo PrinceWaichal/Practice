@@ -14,20 +14,22 @@
 <body >
 	<style>
 		/* Tooltip Container*/
-		.tooltip {
+		.tooltip 
+        {
 					position:relative;
 					display:inline-block;
 					align-content:center;
-				}
+		}
 		/* Tooltip Text */
-		.tooltip .tooltiptext {
+		.tooltip .tooltiptext 
+        {
 							visibility:hidden;
 							width:auto;
-							background-color:deepskyblue;
-							color:crimson;
+							background-color:black;
+							color:white;
 							text-align:center;
 							font-family:Playball;
-							border-radius:8px;
+							border-radius:10px;
 							position:absolute;
 							z-index:2;
 							width:140px;
@@ -35,12 +37,17 @@
 							left:50px;
 							margin-left: -60px; 
 							opacity:80;							
-						}
+		}
 		/*On Hover Event Syntax*/
-		.tooltip:hover .tooltiptext {
+		.tooltip:hover .tooltiptext 
+        {
 									visibility:visible;
-								}
-		
+		}
+		p
+        {
+            color:hotpink;
+            background-color:lavender;
+		}
 	</style>
 	
 	<h1 align="center"> Assignment 1 </h1>
@@ -51,31 +58,31 @@
 	<br>
 		Second Color Denotes Foreground (Text) Color.
 	</p>
-
+    <p id="SecondPara" style="text-align-last:center">This is second paragraph</p>
 	
 		<form align="center">
 			<div class="tooltip">
-				<input type="button" onclick="myFunction0()" value="Default Setup" name="button0">
+				<input type="button" onclick="myFunction0()" value="Default Setup" name="button0" align="center">
 					<span class="tooltiptext">This is a tooltip</span>
 			</div>
 			
 			<div class="tooltip">
-				<input type="button" onclick="myFunction1()" value="Black and White" name="button1">
+				<input type="button" onclick="myFunction1()" value="Black and White" name="button1" align="center">
 					<span class="tooltiptext">This is tooltip</span>
 			</div>
 			
 			<div class="tooltip">
-				<input type="button" onclick="myFunction2()" value="Blue and Red" name="button2">
+				<input type="button" onclick="myFunction2()" value="Blue and Red" name="button2" align="center">
 					<span class="tooltiptext">This is tooltip</span>
 			</div>
 			
 			<div class="tooltip">
-				<input type="button" onclick="myFunction3()" value="Orange and Green" name="button3">
+				<input type="button" onclick="myFunction3()" value="Orange and Green" name="button3" align="center">
 					<span class="tooltiptext">This is tooltip</span>
 			</div>
 			
 			<div class="tooltip">
-				<input type="button" onclick="myFunction4()" value="Pink and Brown" name="button4">
+				<input type="button" onclick="myFunction4()" value="Pink and Brown" name="button4" align="center">
 					<span class="tooltiptext">This is sample</span>
 			</div>
 		</form> 
