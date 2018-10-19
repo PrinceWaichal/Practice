@@ -413,7 +413,6 @@ namespace Project_Library
                 Main();
             }
 
-
             // Using "^="
             public static void XOR()
             {
@@ -587,7 +586,7 @@ namespace Project_Library
                 Ops.Main();
             }
         }
-        ;
+        
         public class Log_Ops
         {
             // Copy - Pasted Exit Code
@@ -630,12 +629,22 @@ namespace Project_Library
 
                 if (num > num1 && num != 0)
                 {
-                    Console.WriteLine("\n{0} is greater than {1}", num.ToString(), num1.ToString());
+                    Console.WriteLine("\n{0} is not zero and is greater than {1}", num.ToString(), num1.ToString());
                 }
 
                 else if (num < num1 || num1 != 0)
                 {
-                    Console.WriteLine("\n{0} and is less than {1}", num1.ToString(), num.ToString());
+                    Console.WriteLine("\n{1} is not zero and is less than {0}", num1.ToString(), num.ToString());
+                }
+
+                else if (num == 0)
+                {
+                    Console.WriteLine("\n{0} is zero therefore only one condition was checked.", num.ToString());
+                }
+
+                else if (num1 == 0)
+                {
+                    Console.WriteLine("\n{0} is zero therefore only one condition was checked.", num1.ToString());
                 }
 
                 else
@@ -1196,21 +1205,20 @@ namespace Project_Library
                 for (int i = 0; i < array1.GetLength(0); i++)
                 {
                     Console.WriteLine("\nEnter the {0}th Row Element : ", i);
-                    array1[i, 0] = Console.ReadLine();
 
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
                         Console.Write("\t& {0}th Column Element : ", j);
-                        array1[0, j] = Console.ReadLine();
+                        array1[i, j] = Console.ReadLine();
                     }
                 }
 
                 for (int i = 0; i < array1.GetLength(0); i++)
                 {
-                    Console.WriteLine("\n{0}th Row Element is : {1}", i,array1[i,0]);
+                    Console.WriteLine("\n{0}th Row ", i);
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write("\n\t& {0}th Column Element is : {1}", j,array1[0,j]);
+                        Console.Write(" & {0}th Column Element is : {1}", j, array1[i,j]);
                     }
                 }
 
@@ -1222,31 +1230,8 @@ namespace Project_Library
             {
                 Console.Clear();
                 // Length is Property ; Rank is property
-                /*
-                 * int[] score1 = new int[3] {20, 50, 60};
-                 * int[] score2 = new int[5] {0, 50, 69, 45};
-                 * int[][] scoresheet = new int[2][] {{score1},{score2}};
-                 * for (int i = 0; i < scoresheet.Length; i++)
-                 *  {
-                 *      if(==0)
-                 *          {
-                 *              for (int j = 0; j< score1.Length; j++)
-                 *                 {
-                 *                      Console.Write("\nFirst Row of Array Element is " + socreshee
-                 *                 }
-                 *          }
-                 *      if(i==1)
-                 *          (
-                 *              for (int j = 0; j<score2.length; j++)
-                 *                  {
-                 *                      Console.Write("\nFirst Array  Element
-                 *                  }
-                 *          }
-                 *   }
-                 *  Console.Write("This program will now terminate");
-                 *  Console.ReadLine();
-                 *  Exit();   
-                 */
+                
+                 
 
                 Console.ReadLine();
                 Main();
@@ -1296,21 +1281,22 @@ namespace Project_Library
         {
             Console.Clear();
             Console.WriteLine("\nEnter the following details :\n");
-            Console.WriteLine("\nEnter Marks for 1st Subject : \t");
+            Console.Write("Enter Marks for 1st Subject : \t");
             double s1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter Marks for 2nd Subject : \t");
+            Console.Write("Enter Marks for 2nd Subject : \t");
             double s2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter Marks for 3rd Subject : \t");
+            Console.Write("Enter Marks for 3rd Subject : \t");
             double s3 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter Marks for 4th Subject : \t");
+            Console.Write("Enter Marks for 4th Subject : \t");
             double s4 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter Marks for 5th Subject : \t");
+            Console.Write("Enter Marks for 5th Subject : \t");
             double s5 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("\nEnter Marks for 6th Subject : \t");
+            Console.Write("Enter Marks for 6th Subject : \t");
             double s6 = Convert.ToDouble(Console.ReadLine());
             double total = s1 + s2 + s3 + s4 + s5 + s6;
             double per = total / 6;
-            Console.WriteLine("\nTotal Marks Secured : \t{0} and percntage are \t{1} %", total.ToString(), per.ToString());
+            Console.WriteLine("\n\t\tResult is as follows :");
+            Console.WriteLine("\nTotal Marks Secured : \t{0}\nAnd percntage are \t{1} %", total.ToString(), per.ToString());
             Console.ReadLine();
             Main();
         }
