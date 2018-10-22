@@ -10,95 +10,153 @@
 	<link rel="stylesheet" href="StyleSheet1.css" />
     <meta content="Rayat Logo.jpg" itemprop="image"> <!--This is not shown in Tab-->
     <link href="Rayat Logo.ico" rel="shortcut icon"> <!--This is shown in Tab-->
+    <script src="Scripts/angular.js"></script>
+    <style>
+        /* Style the button that is used to open and close the collapsible content */
+            .collapse {
+                                    background-color: #eee;
+                                    color: #444;
+                                    cursor: pointer;
+                                    padding: 18px;
+                                    width: 100%;
+                                    border: none;
+                                    text-align: left;
+                                    outline: none;
+                                    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+            .active, .collapse:hover {
+                                                            background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+            .content {
+                            padding: 0 18px;
+                            background-color: white;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: max-height 0.2s ease-out;
+}
+    </style>
+
+    <script>
+        var coll = document.getElementsByClassName("collapse");
+        var i;
+
+        for (i = 0; i < coll.length; i++)
+        {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </head>
 	
 <body id="Body">
-	<h1>Welcome to HTML</h1>
-																<!--As on 2-7-18 10:00--> 
-	<h2>
-		A project by Prince Waichal
-	</h2>
-															
 
-																<!--As on 2-7-18 10.37-->
-	<img src="Prince Waichal.ico" alt="Developer of the Page" style="position:center;height:100px;width:100px;float:initial;" /> <!--Modified on 25-7-18-->
-	
-	<p style="background-color:skyblue;font-size:larger;font-size:xx-large">
-		This is a sample paragraph.
-	</p>
-																<!--As on 4-7-18 10.02-->
-	<ol type="1">
-		<li><a href="Practicals List.html" target="_blank">Practicals List</a></li> <!--As on 6th August 2018 10:30-->
-		<li><a href="Characteristics of a System.docx" target="_blank">Characteristics of System</a></li>
-		<li><a href="Assignment1 (Superb).html" target="_blank">Another Working HTML Program</a> </li>
-	</ol>
-															<!--As on 11-07-18 11.06; Conducted By Mrs. Rathi-->
-	
-	<div id="Practical 1">
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-		<p>Hello everyone, welcome to the world of HTMl</p>
-	</div>
+    <button class="collapse">Click to Extend</button>
+    <div class="content">
+        <h1>Welcome to HTML</h1>
+        <!--As on 2-7-18 10:00-->
+        <h2>
+            A project by Prince Waichal
+        </h2>
 
-                    <!--Monday 20th August 2018, 10.30-->
-    <ul style="list-style:lower-greek">
-        <li>This is "Lower Greek" type of unoredered list</li>
-        <li>This is an list item</li>
-        <shadow>This is sample shadow</shadow>
-    </ul>
-    <!--Five Birds in Ordered List @11.00-->
-    <ol type="I">
-        Birds in Ordered List
-        <li>Sparrow</li>
-        <shadow><content>This content is nested in shadow</content></shadow>
-        <li>Peacock</li>
-        <li>Crow</li>
-        <li>Piegeon</li>
-        <li>Duck</li>
 
-        <!--Five Animals in Unordered List @11.00-->
-        <ul>
-            <li>Human</li>
-            <li>Lion</li>
-            <li>Frog</li>
-            <li>Spider</li>
-            <li>Fly</li>
+        <!--As on 2-7-18 10.37-->
+        <img src="Prince Waichal.ico" alt="Developer of the Page" style="position:center;height:100px;width:100px;float:initial;" /> <!--Modified on 25-7-18-->
+
+        <p style="background-color:skyblue;font-size:larger;font-size:xx-large">
+            This is a sample paragraph.
+        </p>
+        <!--As on 4-7-18 10.02-->
+        <ol type="1">
+            <li><a href="Practicals List.html" target="_blank">Practicals List</a></li> <!--As on 6th August 2018 10:30-->
+            <li><a href="Characteristics of a System.docx" target="_blank">Characteristics of System</a></li>
+            <li><a href="Assignment1 (Superb).html" target="_blank">Another Working HTML Program</a> </li>
+        </ol>
+        <!--As on 11-07-18 11.06; Conducted By Mrs. Rathi-->
+
+        <div id="Practical 1">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Hello everyone, welcome to the world of HTMl</p>
+        </div>
+
+        <!--Monday 20th August 2018, 10.30-->
+        <ul style="list-style:lower-greek">
+            <li>This is "Lower Greek" type of unoredered list</li>
+            <li>This is an list item</li>
+            <shadow>This is sample shadow</shadow>
         </ul>
-    </ol>				
-    <!--21st August 2018 @ 10.35-->
-    <ul style="list-style:georgian">
-        <li>Andhra Pradesh</li>
-        <li>Madhya Pradesh</li>
-        <li>Maharashtra</li>
-        <li>Karnataka</li>
-        <li>Kerala</li>
-    </ul>
+        <!--Five Birds in Ordered List @11.00-->
+        <ol type="I">
+            Birds in Ordered List
+            <li>Sparrow</li>
+            <shadow><content>This content is nested in shadow</content></shadow>
+            <li>Peacock</li>
+            <li>Crow</li>
+            <li>Piegeon</li>
+            <li>Duck</li>
 
-                                                                                    <!--28th August 2018, 10.30 Tuesday-->
-    <!--Table Creation Using various tags-->
-    <table>
-        <caption>Sample Table</caption>
-        <thead>This is a Table</thead>
-        <tr>
-            This is first Row
-            <th style="border:2px groove red">First Column</th>
-            <th>Second Column</th>
-            <th>Third Column</th>
-            <th>Fourth Column</th>
-            <th>Fifth Column</th>
-       </tr>     
-       <tr>
-            <td>Experiment1</td>
-            <td>Experiment2</td>
-            <td>Experiment3</td>
-            <td>Experiment4</td>
-            <td>Experiment5</td>
-        </tr>
-    </table>
+            <!--Five Animals in Unordered List @11.00-->
+            <ul>
+                <li>Human</li>
+                <li>Lion</li>
+                <li>Frog</li>
+                <li>Spider</li>
+                <li>Fly</li>
+            </ul>
+        </ol>
+        <!--21st August 2018 @ 10.35-->
+        <ul style="list-style:georgian">
+            <li>Andhra Pradesh</li>
+            <li>Madhya Pradesh</li>
+            <li>Maharashtra</li>
+            <li>Karnataka</li>
+            <li>Kerala</li>
+        </ul>
+
+        <!--28th August 2018, 10.30 Tuesday-->
+        <!--Table Creation Using various tags-->
+        <table>
+            <caption>Sample Table</caption>
+            <thead>This is a Table</thead>
+            <tr>
+                This is first Row
+                <th style="border:2px groove red">First Column</th>
+                <th>Second Column</th>
+                <th>Third Column</th>
+                <th>Fourth Column</th>
+                <th>Fifth Column</th>
+            </tr>
+            <tr>
+                <td>Experiment1</td>
+                <td>Experiment2</td>
+                <td>Experiment3</td>
+                <td>Experiment4</td>
+                <td>Experiment5</td>
+            </tr>
+        </table>
+    </div>
+	
+
+                                                                            <!--Experimenting with AngularJS-->
+    <div ng-app>
+        <p>This is your first expression {{19*224}}</p>
+        <p>Enter your name : <input type="text" ng-model="name" /> <br />Hello <p ng-bind="name"></p></p>
+    </div>
 
 </body>
 </html>
