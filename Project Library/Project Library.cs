@@ -1007,6 +1007,7 @@ namespace Project_Library
 
             public CopyConstructor(CopyConstructor copy)
             {
+                Console.WriteLine("\n\t\t\tCopy Cat 001");
                 name = copy.name;
                 age = copy.age;
                 address = copy.address;
@@ -1014,6 +1015,7 @@ namespace Project_Library
 
             public CopyConstructor(string name, double age, string address)
             {
+                Console.WriteLine("\n\t\t\tCopy Cat 002");
                 this.name = name;
                 this.age = age;
                 this.address = address;
@@ -1023,7 +1025,7 @@ namespace Project_Library
             {
                 get
                 {
-                    return ("{0} lives in {1} and is {2} years old", name, address, age.ToString());
+                    return  name + " lives in " + address + " and is " + age.ToString() + " years old.";
                 }
             }
             public class Details
@@ -1045,7 +1047,7 @@ namespace Project_Library
 
                 public static void Main()
                 {
-
+                    
                 }
             }
             
