@@ -586,7 +586,7 @@ namespace Project_Library
                 Ops.Main();
             }
         }
-        
+
         public class Log_Ops
         {
             // Copy - Pasted Exit Code
@@ -748,7 +748,7 @@ namespace Project_Library
                 result = ~num;
 
                 Console.WriteLine("\nThe '~' (Complement) Bitwise :");
-                Console.WriteLine("\nConverts the {0} into {1}", num.ToString(),result.ToString());
+                Console.WriteLine("\nConverts the {0} into {1}", num.ToString(), result.ToString());
 
                 Console.ReadLine();
                 Main();
@@ -916,36 +916,10 @@ namespace Project_Library
     // <---------------------------------------------************************************************************-------------------------------------------->
     // <---------------------------------------------************************************************************-------------------------------------------->
 
-    public class BrooP
+    public class Construct
     {
-        public class Branching
+        class DefaultConstructor
         {
-            public static void If()
-            {
-
-            }
-
-            public static void NestedIf()
-            {
-
-            }
-
-
-            public static void IfElse()
-            {
-
-            }
-
-            public static void IfElseIf()
-            {
-
-            }
-
-            public static void Switch()
-            {
-
-            }
-
             public static void Exit()
             {
                 Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
@@ -961,55 +935,41 @@ namespace Project_Library
                 }
             }
 
+            double a;
+            string b;
+            public DefaultConstructor()
+            {
+                Console.WriteLine("\nThis is a Default Constructor Example");
+                a = (double)22/7;
+                b = "Value of Pi is : ";
+            }
+
             public static void Main()
             {
                 Console.Clear();
-                /*
-                 * 
-                 * Branching Statements - 1) If 2) Nested If 3) If-Else 4) If-elseif 5) Switch
-                 * Looping Statements - 1) For 2) While 3) Do-While 4) foreach
-                 * Jumping Statements - 1) goto 
-                 * 
-                 */
 
-                Console.WriteLine("\n\t\t\tBranching Statements Menu");
-                Console.WriteLine("1.If \n2. Nested If\n3. If-Else\n4. If-ElseIf\n5. Switch");
-                string userinput = Console.ReadLine();
-                int number;
-
-                int.TryParse(userinput, out number);
-
-                switch (number)
-                {
-                    case 1:
-                        ;
-                        break;
-
-                    case 2:
-                        ;
-                        break;
-
-                    case 3:
-                        ;
-                        break;
-
-                    case 4:
-                        ;
-                        break;
-
-                    case 5:
-                        ;
-                        break;
-
-                    default:
-                        Exit();
-                        break;
-                }
+                Console.Write("\n\t\t\tSample Program on Constructor");
+                DefaultConstructor obj = new DefaultConstructor();
+                Console.Write(obj.b);
+                Console.Write(obj.a);
+                
+                
+                Console.ReadLine();
+                ;
             }
         }
 
-        public class Loops
+        class ParametrizedConstructor
         {
+            string a, b;
+            public ParametrizedConstructor(string input1, string input2)
+            {
+                Console.Write("\n\t\t\tThis is an example of Parametirzed Constructor");
+                a = input1;
+                Console.WriteLine();
+                b = input2;
+            }
+
             public static void Exit()
             {
                 Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
@@ -1028,33 +988,96 @@ namespace Project_Library
             public static void Main()
             {
                 Console.Clear();
-                Console.WriteLine("\n\t\t\tLooping Statements Menu");
-                Console.WriteLine("1. For\n2. For-Each\n3. Do\n4.Do-While");
-                string userinput = Console.ReadLine();
-                int number;
-                int.TryParse(userinput, out number);
-                switch (number)
-                {
-                    case 1:
-                        ;
-                        break;
 
-                    case 2:
-                        ;
-                        break;
+                Console.WriteLine("\n\t\t\tParametized Constructor");
+                ParametrizedConstructor obj = new ParametrizedConstructor(Console.ReadLine(), Console.ReadLine());
+                Console.Write(obj.a);
+                Console.Write(obj.b);
 
-                    case 3:
-                        ;
-                        break;
-
-                    default:
-                        Exit();
-                        break;
-                }
+                Console.ReadLine();
+                ;
             }
         }
 
-        public class Jump
+        class CopyConstructor
+        {
+            public string name;
+            public double age;
+            public string address;
+
+            public CopyConstructor(CopyConstructor copy)
+            {
+                name = copy.name;
+                age = copy.age;
+                address = copy.address;
+            }
+
+            public CopyConstructor(string name, double age, string address)
+            {
+                this.name = name;
+                this.age = age;
+                this.address = address;
+            }
+
+            public string details
+            {
+                get
+                {
+                    return ("{0} lives in {1} and is {2} years old", name, address, age.ToString());
+                }
+            }
+            public class Details
+            {
+                public static void Exit()
+                {
+                    Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                    string c = Console.ReadLine();
+                    if (c == "a" || c == "A")
+                    {
+                        // Redirects the control back to the start of the Main() method of the project
+                        ;
+                    }
+                    else
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+
+                public static void Main()
+                {
+
+                }
+            }
+            
+        }
+        class StaticConstructor
+        {
+
+
+            public static void Exit()
+            {
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
+                {
+                    // Redirects the control back to the start of the Main() method of the project
+                    ;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }          
+
+            public static void Main()
+            {
+
+            }
+        }
+
+        
+
+        class PrivateConstructor
         {
             public static void Exit()
             {
@@ -1072,13 +1095,7 @@ namespace Project_Library
             }
 
             public static void Main()
-            {
-                Console.Clear();
-                Console.WriteLine("\nJumping Statement");
-                Console.WriteLine("<------Only One Statement Available------>");
-                Console.WriteLine("\t\tGoTo");
-
-            }
+            { }
         }
 
         public static void Exit()
@@ -1099,34 +1116,40 @@ namespace Project_Library
         public static void Main()
         {
             Console.Clear();
-            Console.WriteLine("\n\t\t\tBranching & Looping Statements");
-            Console.WriteLine("\nKindly Select Any one of the Followig Option");
-            Console.WriteLine("\n1. Branching Statements\n2. Looping Statements\n3. Jumping Satements");
-            string userin = Console.ReadLine();
 
+            Console.WriteLine("\n\t\t\tList of Constructor Examples");
+            Console.Write("\n1. Default Constructor\n2. Parametirized Constructor\n3. Static Constructor\n4. Copy Constructor\n5. Private Constructor");
+            Console.WriteLine("\nPress any other key to exit the menu");
+            string userinput = Console.ReadLine();
             int input;
-            int.TryParse(userin, out input);
+            Int32.TryParse(userinput, out input);
 
-            switch(input)
+            switch ( input )
             {
                 case 1:
-                    Branching.Main();
+                    DefaultConstructor.Main();
                     break;
 
                 case 2:
-                    Loops.Main();
+                    ParametrizedConstructor.Main();
                     break;
 
                 case 3:
-                    Jump.Main();
+                    StaticConstructor.Main();
+                    break;
+
+                case 4:
+                    CopyConstructor.Details.Main();
+                    break;
+
+                case 5:
+                    PrivateConstructor.Main();
                     break;
 
                 default:
                     Exit();
                     break;
             }
-
-            Console.ReadLine();
         }
     }
 
@@ -1230,9 +1253,7 @@ namespace Project_Library
             {
                 Console.Clear();
                 // Length is Property ; Rank is property
-                
-                 
-
+                Console.WriteLine("Sorry, this program is incomplete");
                 Console.ReadLine();
                 Main();
             }
