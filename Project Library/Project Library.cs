@@ -1047,11 +1047,15 @@ namespace Project_Library
 
                 public static void Main()
                 {
-                    
+                    CopyConstructor copy1 = new CopyConstructor("Prince Waichal", 19.8, "Satara");
+                    CopyConstructor copy2 = new CopyConstructor(copy1);
+                    Console.Write(copy2.details);
+                    Console.ReadLine();
                 }
             }
             
         }
+
         class StaticConstructor
         {
 
