@@ -940,7 +940,7 @@ namespace Project_Library
             public DefaultConstructor()
             {
                 Console.WriteLine("\nThis is a Default Constructor Example");
-                a = (double)22/7;
+                a = (double)22 / 7;
                 b = "Value of Pi is : ";
             }
 
@@ -952,8 +952,8 @@ namespace Project_Library
                 DefaultConstructor obj = new DefaultConstructor();
                 Console.Write(obj.b);
                 Console.Write(obj.a);
-                
-                
+
+
                 Console.ReadLine();
                 ;
             }
@@ -1025,7 +1025,7 @@ namespace Project_Library
             {
                 get
                 {
-                    return  name + " lives in " + address + " and is " + age.ToString() + " years old.";
+                    return name + " lives in " + address + " and is " + age.ToString() + " years old.";
                 }
             }
             public class Details
@@ -1053,7 +1053,7 @@ namespace Project_Library
                     Console.ReadLine();
                 }
             }
-            
+
         }
 
         class StaticConstructor
@@ -1073,7 +1073,7 @@ namespace Project_Library
                 {
                     Environment.Exit(0);
                 }
-            }          
+            }
 
             public static void Main()
             {
@@ -1081,7 +1081,7 @@ namespace Project_Library
             }
         }
 
-        
+
 
         class PrivateConstructor
         {
@@ -1130,7 +1130,7 @@ namespace Project_Library
             int input;
             Int32.TryParse(userinput, out input);
 
-            switch ( input )
+            switch (input)
             {
                 case 1:
                     DefaultConstructor.Main();
@@ -1247,7 +1247,7 @@ namespace Project_Library
                     Console.WriteLine("\n{0}th Row ", i);
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write(" & {0}th Column Element is : {1}", j, array1[i,j]);
+                        Console.Write(" & {0}th Column Element is : {1}", j, array1[i, j]);
                     }
                 }
 
@@ -1278,7 +1278,7 @@ namespace Project_Library
 
                 int.TryParse(input, out innum);
 
-                switch(innum)
+                switch (innum)
                 {
                     case 1:
                         OneDArray();
@@ -1332,7 +1332,7 @@ namespace Project_Library
         //Calculating Area of Circle
         {
             Console.Clear();
-            const double pi = (double)22/7;
+            const double pi = (double)22 / 7;
             Console.WriteLine("\nEnter the Radius of the Circle");
             double r = Convert.ToDouble(Console.ReadLine());
             double a = pi * r * r;
@@ -1376,17 +1376,17 @@ namespace Project_Library
             Console.Write("\nEnter Third Number : ");
             double number3 = Convert.ToDouble(Console.ReadLine());
 
-            if(number1 > number2 && number1 > number3)
+            if (number1 > number2 && number1 > number3)
             {
                 Console.Write("\nThe Largest Number is " + number1);
             }
 
-            else if(number2>number1 && number2>number3)
+            else if (number2 > number1 && number2 > number3)
             {
                 Console.Write("\nThe Largest Number is " + number2);
             }
 
-            else if(number3>number1 && number3>number2)
+            else if (number3 > number1 && number3 > number2)
             {
                 Console.Write("\nThe Largest Number is " + number3);
             }
@@ -1469,7 +1469,7 @@ namespace Project_Library
             Console.WriteLine("\n\t\t\tMagnitude of a Number");
             Console.WriteLine("\n\n<===========Integer Input Only===========>");
             Console.WriteLine("\nEnter Any Number");
-            long input = Convert.ToInt64(Console.ReadLine()),counter=0;
+            long input = Convert.ToInt64(Console.ReadLine()), counter = 0;
 
             do
             {
@@ -1478,7 +1478,7 @@ namespace Project_Library
             }
             while (input != 0);
 
-            Console.WriteLine("\nThe Number of Digits in entered number is = {0}",counter.ToString());
+            Console.WriteLine("\nThe Number of Digits in entered number is = {0}", counter.ToString());
             Console.ReadLine();
             Main();
         }
@@ -1505,7 +1505,7 @@ namespace Project_Library
             string reverse = "";                    // Initializing an empty string to store value later on
             int length;                             // Counter for loop purpose (I think)
             length = input.Length - 1;              // Storing number of characters of User Input String && Subtraction since numbering starts from 0
-            while (length>=0)                       // Loop will run till last character of the string is not reached
+            while (length >= 0)                       // Loop will run till last character of the string is not reached
             {
                 reverse = reverse + input[length];  // This is to be confirmed
                 length--;                           // Reverse Loop
@@ -1528,7 +1528,7 @@ namespace Project_Library
 
             for (int number1 = number; number1 >= 1; number1--)
             {
-                 result = result * number1;
+                result = result * number1;
             }
 
             Console.Write("\nFactorial of {0} is {1}", number.ToString(), result.ToString());
@@ -1655,6 +1655,100 @@ namespace Project_Library
                     Exit();
                     break;
             }
+        }
+    }
+
+
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+
+    public class Except
+    {
+        public static void SimpleExcept()
+        {
+            Console.Clear();
+            Console.WriteLine("\n\t\tSimple Exception Program");
+            int a = 5, b = 0;
+            Console.WriteLine(a + " divided by " + b + " will give...");
+            try
+            {
+                int c = a / b;
+            }
+            catch
+            {
+                Console.WriteLine(new Exception());
+            }
+        }
+
+        public static void MultiCatch()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\tMultiple Catch Statements Program");
+
+            int[] num = { 2, 5, 6, 8 };
+            int[] dnm = { 1, 5, 0 };
+
+            Console.Write("\nValues of Numerator Are : ");
+            for (int i = 0; i<num.Length; i++)
+            {
+                Console.Write(num[i] + " ");
+            }
+            Console.Write("\nValues of Denominator Are : ");
+            for (int i = 0; i < dnm.Length; i++)
+            {
+                Console.Write(dnm[i] + " ");
+            }
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(num[i] / dnm[i]);
+                }
+                catch (DivideByZeroException e)
+                {
+                    Console.WriteLine(e);
+                }
+                catch
+                {
+                    Console.Write(new Exception());
+                }
+            }
+        }
+
+        public static void Main()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tException Handling Program List");
+            Console.WriteLine("\nKindly select any one of the following:");
+            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch");
+
+            string input = Console.ReadLine();
+
+            int number;
+
+            int.TryParse(input, out number);
+
+            switch (number)
+            {
+                case 1:
+                    SimpleExcept();
+                    break;
+
+                case 2:
+                    MultiCatch();
+                    break;
+
+                default:
+                    ;
+                    break;
+            }
+
+            Console.ReadLine();
+            ;
         }
     }
 }
