@@ -1700,7 +1700,7 @@ namespace Project_Library
             {
                 Console.Write(dnm[i] + " ");
             }
-
+            Console.Write("\n");
             for (int i = 0; i < num.Length; i++)
             {
                 try
@@ -1718,13 +1718,58 @@ namespace Project_Library
             }
         }
 
+        public static void NestedTry()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tNested Try Program");
+
+            int[] num = { 40, 30, 15, 10};
+            int[] dnm = { 7, 9,  0 };
+
+            Console.Write("\nNumerators : ");
+            for (int i = 0; i<num.Length; i++)
+            {
+                Console.WriteLine(num[i]);
+                Console.WriteLine("\t");
+                    
+            }
+
+            Console.Write("\nDenominators : ");
+            for (int i = 0; i < dnm.Length; i++)
+            {
+                Console.WriteLine(dnm[i]);
+                Console.WriteLine("\t");
+            }
+
+            for(int i = 0; i < num.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(num[i] * dnm[i]);
+                        try
+                            {
+                                Console.WriteLine(num[i] / dnm[i]);
+                            }
+                       catch (DivideByZeroException)
+                            {
+                               Console.WriteLine("\nYou Tried to Divide by Zero");
+                            }    
+                }
+                catch
+                {
+                    Console.WriteLine("\nSomething Went Wrong");
+                }
+            }
+        }
+
         public static void Main()
         {
             Console.Clear();
 
             Console.WriteLine("\n\t\t\tException Handling Program List");
             Console.WriteLine("\nKindly select any one of the following:");
-            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch");
+            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try");
 
             string input = Console.ReadLine();
 
@@ -1740,6 +1785,10 @@ namespace Project_Library
 
                 case 2:
                     MultiCatch();
+                    break;
+
+                case 3:
+                    NestedTry();
                     break;
 
                 default:
