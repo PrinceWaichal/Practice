@@ -1665,6 +1665,53 @@ namespace Project_Library
 
     public class Except
     {
+        public class CustomExcept : Exception
+        {
+            public CustomExcept(string text) : base(text)
+            {
+                Console.WriteLine("\nSorry, the entered age is below 18 which is not valid.");
+            }
+        }
+
+        public class CustomException
+        {
+         public static int Validate(int age)
+            {
+                if (age <= 18)
+                {
+                    throw new CustomExcept("\n\t\t\tError!!!");
+                }
+                else
+                {
+                    return age;   
+                }
+            }
+
+            public static void Main()
+            {
+                Console.Clear();
+
+                Console.WriteLine("\n\t\t\tUser-Defined Exception Program");
+                Console.Write("\nKindly enter age in integer : ");
+                
+                try
+                {
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num1 = Validate(num);
+                    Console.WriteLine("\nEntered Age : " + num1 + ", is valid for further proceeding");
+                    Console.ReadLine();
+                    ;
+                }
+
+                catch
+                {
+                    Console.WriteLine("\nWrong Input Provided");
+                    Console.ReadLine();
+                    Main();
+                }
+            }
+        }
+
         public static void SimpleExcept()
         {
             Console.Clear();
@@ -1769,7 +1816,7 @@ namespace Project_Library
 
             Console.WriteLine("\n\t\t\tException Handling Program List");
             Console.WriteLine("\nKindly select any one of the following:");
-            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try");
+            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try\n4. Custom Exception");
 
             string input = Console.ReadLine();
 
@@ -1789,6 +1836,10 @@ namespace Project_Library
 
                 case 3:
                     NestedTry();
+                    break;
+
+                case 4:
+                    CustomException.Main();
                     break;
 
                 default:
