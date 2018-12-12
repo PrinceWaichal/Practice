@@ -31,7 +31,7 @@ namespace Main_Console_Application
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Operators\n2. Branching & Looping Statements\n3. Miscellaneous Projects");
+            Console.WriteLine("\n1. Operators\n2. Constructor Examples\n3. Miscellaneous Projects\n4. Exception Handling");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
@@ -48,11 +48,15 @@ namespace Main_Console_Application
                     break; // States that the first case is finished. If removed, gives compile-time error
 
                 case 2:
-                    Project_Library.BrooP.Main();
+                    Project_Library.Construct.Main();
                     break;
 
                 case 3:
                     Project_Library.Misc_Proj.Main();
+                    break;
+
+                case 4:
+                    Project_Library.Except.Main(); ;
                     break;
 
                 default:

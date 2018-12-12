@@ -586,7 +586,7 @@ namespace Project_Library
                 Ops.Main();
             }
         }
-        
+
         public class Log_Ops
         {
             // Copy - Pasted Exit Code
@@ -748,7 +748,7 @@ namespace Project_Library
                 result = ~num;
 
                 Console.WriteLine("\nThe '~' (Complement) Bitwise :");
-                Console.WriteLine("\nConverts the {0} into {1}", num.ToString(),result.ToString());
+                Console.WriteLine("\nConverts the {0} into {1}", num.ToString(), result.ToString());
 
                 Console.ReadLine();
                 Main();
@@ -916,36 +916,10 @@ namespace Project_Library
     // <---------------------------------------------************************************************************-------------------------------------------->
     // <---------------------------------------------************************************************************-------------------------------------------->
 
-    public class BrooP
+    public class Construct
     {
-        public class Branching
+        class DefaultConstructor
         {
-            public static void If()
-            {
-
-            }
-
-            public static void NestedIf()
-            {
-
-            }
-
-
-            public static void IfElse()
-            {
-
-            }
-
-            public static void IfElseIf()
-            {
-
-            }
-
-            public static void Switch()
-            {
-
-            }
-
             public static void Exit()
             {
                 Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
@@ -961,55 +935,41 @@ namespace Project_Library
                 }
             }
 
+            double a;
+            string b;
+            public DefaultConstructor()
+            {
+                Console.WriteLine("\nThis is a Default Constructor Example");
+                a = (double)22 / 7;
+                b = "Value of Pi is : ";
+            }
+
             public static void Main()
             {
                 Console.Clear();
-                /*
-                 * 
-                 * Branching Statements - 1) If 2) Nested If 3) If-Else 4) If-elseif 5) Switch
-                 * Looping Statements - 1) For 2) While 3) Do-While 4) foreach
-                 * Jumping Statements - 1) goto 
-                 * 
-                 */
 
-                Console.WriteLine("\n\t\t\tBranching Statements Menu");
-                Console.WriteLine("1.If \n2. Nested If\n3. If-Else\n4. If-ElseIf\n5. Switch");
-                string userinput = Console.ReadLine();
-                int number;
+                Console.Write("\n\t\t\tSample Program on Constructor");
+                DefaultConstructor obj = new DefaultConstructor();
+                Console.Write(obj.b);
+                Console.Write(obj.a);
 
-                int.TryParse(userinput, out number);
 
-                switch (number)
-                {
-                    case 1:
-                        ;
-                        break;
-
-                    case 2:
-                        ;
-                        break;
-
-                    case 3:
-                        ;
-                        break;
-
-                    case 4:
-                        ;
-                        break;
-
-                    case 5:
-                        ;
-                        break;
-
-                    default:
-                        Exit();
-                        break;
-                }
+                Console.ReadLine();
+                ;
             }
         }
 
-        public class Loops
+        class ParametrizedConstructor
         {
+            string a, b;
+            public ParametrizedConstructor(string input1, string input2)
+            {
+                Console.Write("\n\t\t\tThis is an example of Parametirzed Constructor");
+                a = input1;
+                Console.WriteLine();
+                b = input2;
+            }
+
             public static void Exit()
             {
                 Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
@@ -1028,34 +988,78 @@ namespace Project_Library
             public static void Main()
             {
                 Console.Clear();
-                Console.WriteLine("\n\t\t\tLooping Statements Menu");
-                Console.WriteLine("1. For\n2. For-Each\n3. Do\n4.Do-While");
-                string userinput = Console.ReadLine();
-                int number;
-                int.TryParse(userinput, out number);
-                switch (number)
-                {
-                    case 1:
-                        ;
-                        break;
 
-                    case 2:
-                        ;
-                        break;
+                Console.WriteLine("\n\t\t\tParametized Constructor");
+                ParametrizedConstructor obj = new ParametrizedConstructor(Console.ReadLine(), Console.ReadLine());
+                Console.Write(obj.a);
+                Console.Write(obj.b);
 
-                    case 3:
-                        ;
-                        break;
-
-                    default:
-                        Exit();
-                        break;
-                }
+                Console.ReadLine();
+                ;
             }
         }
 
-        public class Jump
+        class CopyConstructor
         {
+            public string name;
+            public double age;
+            public string address;
+
+            public CopyConstructor(CopyConstructor copy)
+            {
+                Console.WriteLine("\n\t\t\tCopy Cat 001");
+                name = copy.name;
+                age = copy.age;
+                address = copy.address;
+            }
+
+            public CopyConstructor(string name, double age, string address)
+            {
+                Console.WriteLine("\n\t\t\tCopy Cat 002");
+                this.name = name;
+                this.age = age;
+                this.address = address;
+            }
+
+            public string details
+            {
+                get
+                {
+                    return name + " lives in " + address + " and is " + age.ToString() + " years old.";
+                }
+            }
+            public class Details
+            {
+                public static void Exit()
+                {
+                    Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                    string c = Console.ReadLine();
+                    if (c == "a" || c == "A")
+                    {
+                        // Redirects the control back to the start of the Main() method of the project
+                        ;
+                    }
+                    else
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+
+                public static void Main()
+                {
+                    CopyConstructor copy1 = new CopyConstructor("Prince Waichal", 19.8, "Satara");
+                    CopyConstructor copy2 = new CopyConstructor(copy1);
+                    Console.Write(copy2.details);
+                    Console.ReadLine();
+                }
+            }
+
+        }
+
+        class StaticConstructor
+        {
+
+
             public static void Exit()
             {
                 Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
@@ -1073,12 +1077,31 @@ namespace Project_Library
 
             public static void Main()
             {
-                Console.Clear();
-                Console.WriteLine("\nJumping Statement");
-                Console.WriteLine("<------Only One Statement Available------>");
-                Console.WriteLine("\t\tGoTo");
 
             }
+        }
+
+
+
+        class PrivateConstructor
+        {
+            public static void Exit()
+            {
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
+                {
+                    // Redirects the control back to the start of the Main() method of the project
+                    ;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }
+
+            public static void Main()
+            { }
         }
 
         public static void Exit()
@@ -1099,34 +1122,40 @@ namespace Project_Library
         public static void Main()
         {
             Console.Clear();
-            Console.WriteLine("\n\t\t\tBranching & Looping Statements");
-            Console.WriteLine("\nKindly Select Any one of the Followig Option");
-            Console.WriteLine("\n1. Branching Statements\n2. Looping Statements\n3. Jumping Satements");
-            string userin = Console.ReadLine();
 
+            Console.WriteLine("\n\t\t\tList of Constructor Examples");
+            Console.Write("\n1. Default Constructor\n2. Parametirized Constructor\n3. Static Constructor\n4. Copy Constructor\n5. Private Constructor");
+            Console.WriteLine("\nPress any other key to exit the menu");
+            string userinput = Console.ReadLine();
             int input;
-            int.TryParse(userin, out input);
+            Int32.TryParse(userinput, out input);
 
-            switch(input)
+            switch (input)
             {
                 case 1:
-                    Branching.Main();
+                    DefaultConstructor.Main();
                     break;
 
                 case 2:
-                    Loops.Main();
+                    ParametrizedConstructor.Main();
                     break;
 
                 case 3:
-                    Jump.Main();
+                    StaticConstructor.Main();
+                    break;
+
+                case 4:
+                    CopyConstructor.Details.Main();
+                    break;
+
+                case 5:
+                    PrivateConstructor.Main();
                     break;
 
                 default:
                     Exit();
                     break;
             }
-
-            Console.ReadLine();
         }
     }
 
@@ -1218,7 +1247,7 @@ namespace Project_Library
                     Console.WriteLine("\n{0}th Row ", i);
                     for (int j = 0; j < array1.GetLength(1); j++)
                     {
-                        Console.Write(" & {0}th Column Element is : {1}", j, array1[i,j]);
+                        Console.Write(" & {0}th Column Element is : {1}", j, array1[i, j]);
                     }
                 }
 
@@ -1230,9 +1259,7 @@ namespace Project_Library
             {
                 Console.Clear();
                 // Length is Property ; Rank is property
-                
-                 
-
+                Console.WriteLine("Sorry, this program is incomplete");
                 Console.ReadLine();
                 Main();
             }
@@ -1251,7 +1278,7 @@ namespace Project_Library
 
                 int.TryParse(input, out innum);
 
-                switch(innum)
+                switch (innum)
                 {
                     case 1:
                         OneDArray();
@@ -1305,7 +1332,7 @@ namespace Project_Library
         //Calculating Area of Circle
         {
             Console.Clear();
-            const double pi = (double)22/7;
+            const double pi = (double)22 / 7;
             Console.WriteLine("\nEnter the Radius of the Circle");
             double r = Convert.ToDouble(Console.ReadLine());
             double a = pi * r * r;
@@ -1349,17 +1376,17 @@ namespace Project_Library
             Console.Write("\nEnter Third Number : ");
             double number3 = Convert.ToDouble(Console.ReadLine());
 
-            if(number1 > number2 && number1 > number3)
+            if (number1 > number2 && number1 > number3)
             {
                 Console.Write("\nThe Largest Number is " + number1);
             }
 
-            else if(number2>number1 && number2>number3)
+            else if (number2 > number1 && number2 > number3)
             {
                 Console.Write("\nThe Largest Number is " + number2);
             }
 
-            else if(number3>number1 && number3>number2)
+            else if (number3 > number1 && number3 > number2)
             {
                 Console.Write("\nThe Largest Number is " + number3);
             }
@@ -1442,7 +1469,7 @@ namespace Project_Library
             Console.WriteLine("\n\t\t\tMagnitude of a Number");
             Console.WriteLine("\n\n<===========Integer Input Only===========>");
             Console.WriteLine("\nEnter Any Number");
-            long input = Convert.ToInt64(Console.ReadLine()),counter=0;
+            long input = Convert.ToInt64(Console.ReadLine()), counter = 0;
 
             do
             {
@@ -1451,7 +1478,7 @@ namespace Project_Library
             }
             while (input != 0);
 
-            Console.WriteLine("\nThe Number of Digits in entered number is = {0}",counter.ToString());
+            Console.WriteLine("\nThe Number of Digits in entered number is = {0}", counter.ToString());
             Console.ReadLine();
             Main();
         }
@@ -1478,7 +1505,7 @@ namespace Project_Library
             string reverse = "";                    // Initializing an empty string to store value later on
             int length;                             // Counter for loop purpose (I think)
             length = input.Length - 1;              // Storing number of characters of User Input String && Subtraction since numbering starts from 0
-            while (length>=0)                       // Loop will run till last character of the string is not reached
+            while (length >= 0)                       // Loop will run till last character of the string is not reached
             {
                 reverse = reverse + input[length];  // This is to be confirmed
                 length--;                           // Reverse Loop
@@ -1501,7 +1528,7 @@ namespace Project_Library
 
             for (int number1 = number; number1 >= 1; number1--)
             {
-                 result = result * number1;
+                result = result * number1;
             }
 
             Console.Write("\nFactorial of {0} is {1}", number.ToString(), result.ToString());
@@ -1628,6 +1655,200 @@ namespace Project_Library
                     Exit();
                     break;
             }
+        }
+    }
+
+
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+
+    public class Except
+    {
+        public class CustomExcept : Exception
+        {
+            public CustomExcept(string text) : base(text)
+            {
+                Console.WriteLine("\nSorry, the entered age is below 18 which is not valid.");
+            }
+        }
+
+        public class CustomException
+        {
+         public static int Validate(int age)
+            {
+                if (age <= 18)
+                {
+                    throw new CustomExcept("\n\t\t\tError!!!");
+                }
+                else
+                {
+                    return age;   
+                }
+            }
+
+            public static void Main()
+            {
+                Console.Clear();
+
+                Console.WriteLine("\n\t\t\tUser-Defined Exception Program");
+                Console.Write("\nKindly enter age in integer : ");
+                
+                try
+                {
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    int num1 = Validate(num);
+                    Console.WriteLine("\nEntered Age : " + num1 + ", is valid for further proceeding");
+                    Console.ReadLine();
+                    ;
+                }
+
+                catch
+                {
+                    Console.WriteLine("\nWrong Input Provided");
+                    Console.ReadLine();
+                    Main();
+                }
+            }
+        }
+
+        public static void SimpleExcept()
+        {
+            Console.Clear();
+            Console.WriteLine("\n\t\tSimple Exception Program");
+            int a = 5, b = 0;
+            Console.WriteLine(a + " divided by " + b + " will give...");
+            try
+            {
+                int c = a / b;
+            }
+            catch
+            {
+                Console.WriteLine(new Exception());
+            }
+        }
+
+        public static void MultiCatch()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\tMultiple Catch Statements Program");
+
+            int[] num = { 2, 5, 6, 8 };
+            int[] dnm = { 1, 5, 0 };
+
+            Console.Write("\nValues of Numerator Are : ");
+            for (int i = 0; i<num.Length; i++)
+            {
+                Console.Write(num[i] + " ");
+            }
+            Console.Write("\nValues of Denominator Are : ");
+            for (int i = 0; i < dnm.Length; i++)
+            {
+                Console.Write(dnm[i] + " ");
+            }
+            Console.Write("\n");
+            for (int i = 0; i < num.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(num[i] / dnm[i]);
+                }
+                catch (DivideByZeroException e)
+                {
+                    Console.WriteLine(e);
+                }
+                catch
+                {
+                    Console.Write(new Exception());
+                }
+            }
+        }
+
+        public static void NestedTry()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tNested Try Program");
+
+            int[] num = { 40, 30, 15, 10};
+            int[] dnm = { 7, 9,  0 };
+
+            Console.Write("\nNumerators : ");
+            for (int i = 0; i<num.Length; i++)
+            {
+                Console.WriteLine(num[i]);
+                Console.WriteLine("\t");
+                    
+            }
+
+            Console.Write("\nDenominators : ");
+            for (int i = 0; i < dnm.Length; i++)
+            {
+                Console.WriteLine(dnm[i]);
+                Console.WriteLine("\t");
+            }
+
+            for(int i = 0; i < num.Length; i++)
+            {
+                try
+                {
+                    Console.WriteLine(num[i] * dnm[i]);
+                        try
+                            {
+                                Console.WriteLine(num[i] / dnm[i]);
+                            }
+                       catch (DivideByZeroException)
+                            {
+                               Console.WriteLine("\nYou Tried to Divide by Zero");
+                            }    
+                }
+                catch
+                {
+                    Console.WriteLine("\nSomething Went Wrong");
+                }
+            }
+        }
+
+        public static void Main()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tException Handling Program List");
+            Console.WriteLine("\nKindly select any one of the following:");
+            Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try\n4. Custom Exception");
+
+            string input = Console.ReadLine();
+
+            int number;
+
+            int.TryParse(input, out number);
+
+            switch (number)
+            {
+                case 1:
+                    SimpleExcept();
+                    break;
+
+                case 2:
+                    MultiCatch();
+                    break;
+
+                case 3:
+                    NestedTry();
+                    break;
+
+                case 4:
+                    CustomException.Main();
+                    break;
+
+                default:
+                    ;
+                    break;
+            }
+
+            Console.ReadLine();
+            ;
         }
     }
 }
