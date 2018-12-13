@@ -1864,11 +1864,11 @@ namespace Project_Library
                     break;
 
                 case 5:
-                    ;
+                    CheckedExcept();
                     break;
 
                 case 6:
-                    ;
+                    UnCheckedExcept();
                     break;
 
                 default:
