@@ -1810,6 +1810,26 @@ namespace Project_Library
             }
         }
 
+        public static void CheckedExcept()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tChecked Exception Handling");
+
+            Console.ReadLine();
+            ;
+        }
+
+        public static void UnCheckedExcept()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tUnchecked Exception Handling");
+
+            Console.ReadLine();
+            ;
+        }
+
         public static void Main()
         {
             Console.Clear();
@@ -1817,6 +1837,7 @@ namespace Project_Library
             Console.WriteLine("\n\t\t\tException Handling Program List");
             Console.WriteLine("\nKindly select any one of the following:");
             Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try\n4. Custom Exception");
+            Console.WriteLine("\n5. Checked Exception\n6. Unchecked Exception");
 
             string input = Console.ReadLine();
 
@@ -1840,6 +1861,14 @@ namespace Project_Library
 
                 case 4:
                     CustomException.Main();
+                    break;
+
+                case 5:
+                    ;
+                    break;
+
+                case 6:
+                    ;
                     break;
 
                 default:
