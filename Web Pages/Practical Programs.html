@@ -49,9 +49,12 @@
             coll[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
+                if (content.style.display === "block")
+                {
                     content.style.display = "none";
-                } else {
+                }
+                else
+                {
                     content.style.display = "block";
                 }
             });
@@ -76,12 +79,14 @@
         <p style="background-color:skyblue;font-size:larger;font-size:xx-large">
             This is a sample paragraph.
         </p>
+
         <!--As on 4-7-18 10.02-->
         <ol type="1">
             <li><a href="Practicals List.html" target="_blank">Practicals List</a></li> <!--As on 6th August 2018 10:30-->
             <li><a href="Characteristics of a System.docx" target="_blank">Characteristics of System</a></li>
             <li><a href="Assignment1 (Superb).html" target="_blank">Another Working HTML Program</a> </li>
         </ol>
+        
         <!--As on 11-07-18 11.06; Conducted By Mrs. Rathi-->
 
         <div id="Practical 1">
@@ -100,6 +105,7 @@
             <li>This is an list item</li>
             <shadow>This is sample shadow</shadow>
         </ul>
+
         <!--Five Birds in Ordered List @11.00-->
         <ol type="I">
             Birds in Ordered List
@@ -119,6 +125,7 @@
                 <li>Fly</li>
             </ul>
         </ol>
+
         <!--21st August 2018 @ 10.35-->
         <ul style="list-style:georgian">
             <li>Andhra Pradesh</li>
@@ -150,12 +157,60 @@
             </tr>
         </table>
     </div>
-	
+
+    <!--18th December 2018, 10:15 Tuesday-->
+    <!--JavaScript Programming-->
+    <script type="text/javascript" language="javascript">
+        <!--
+        var a = 10;
+        var b = 20;
+        document.writeln("Hello World!");
+        document.write("<br>");
+        document.writeln(a + b);
+        document.write("<br>");
+        function HelloUser()
+        {
+        var name = prompt("Enter Your Name : ", "");
+            alert("Hello, " + name);
+        }
+        function Menu()
+        {
+            var name = document.getElementById("Men").value;
+            document.getElementById("Testing").innerHTML = "Your preferred Language is : " + name;
+        }
+        function transition(x)
+        {
+            x.style.transition = 20;
+        }
+        //-->
+    </script>
+
+	<input type="button" onclick="HelloUser()" value="Try Me" style="background-color:cyan;font-family:'Lucida Handwriting';" />
+    
+    <br />
+    
+    <p>Hello, kindly select any of the following language:</p>
+    
+    <select id="Men" onchange="Menu()">
+        <option value="" selected disabled>Please Select</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="AngularJavaScript">AngularJS</option>
+        <option value="PHP">PHP</option>
+       </select>
+    
+    <p id="Testing"></p>
+    
+    <p onmouseover="transition(this)">This is Sample Line for the Transition / Animation Effect.</p>
+    <noscript>
+        <h4 style="font-family:'Lucida Handwriting'">Sorry, Incorrect Settings.</h4>
+    </noscript>
+
 
                                                                             <!--Experimenting with AngularJS-->
     <div ng-app>
         <p>This is your first expression {{19*224}}</p>
-        <p>Enter your name : <input type="text" ng-model="name" /> <br />Hello <h2 ng-bind="name" style="font-family:'Arial Rounded MT';"></h2></p>
+        <p>Enter your name : <input type="text" ng-model="name" /> <br />Hello <h1 ng-bind="name" style="font-family:'Arial Rounded MT';"></h1></p>
     </div>
 
 </body>
