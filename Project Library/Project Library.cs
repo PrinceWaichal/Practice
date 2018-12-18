@@ -1875,9 +1875,6 @@ namespace Project_Library
                     ;
                     break;
             }
-
-            Console.ReadLine();
-            ;
         }
     }
 }
