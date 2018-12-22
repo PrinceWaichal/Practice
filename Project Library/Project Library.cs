@@ -1837,7 +1837,7 @@ namespace Project_Library
             Console.WriteLine("\n\t\t\tException Handling Program List");
             Console.WriteLine("\nKindly select any one of the following:");
             Console.WriteLine("\n1. Simple Exception Program\n2. Try & Multi Catch\n3. Nested Try\n4. Custom Exception");
-            Console.WriteLine("\n5. Checked Exception\n6. Unchecked Exception");
+            Console.WriteLine("5. Checked Exception\n6. Unchecked Exception");
 
             string input = Console.ReadLine();
 
@@ -1875,8 +1875,6 @@ namespace Project_Library
                     ;
                     break;
             }
-
-            Console.ReadLine();
             ;
         }
     }
