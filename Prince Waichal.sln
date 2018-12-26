@@ -28,6 +28,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web Pages", "Web Pages\", "
 		SlnRelativePath = "Web Pages\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeWindowsForm", "Practice\PracticeWindowsForm.csproj", "{ECD8147A-AAC2-4389-B276-72BC75D83850}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{60006A40-52E1-4EFB-AC9D-C15607986EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60006A40-52E1-4EFB-AC9D-C15607986EC3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{60006A40-52E1-4EFB-AC9D-C15607986EC3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{ECD8147A-AAC2-4389-B276-72BC75D83850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD8147A-AAC2-4389-B276-72BC75D83850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD8147A-AAC2-4389-B276-72BC75D83850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD8147A-AAC2-4389-B276-72BC75D83850}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
