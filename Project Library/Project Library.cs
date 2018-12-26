@@ -1878,4 +1878,254 @@ namespace Project_Library
             ;
         }
     }
+
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+
+    public class StringFuctions
+    {
+        public static void Compare()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tCompare String Function");
+
+            Console.Write("\nEnter First String to Compare :");
+            string input1 = Console.ReadLine();
+            Console.Write("\nEnter Second String to Compare : ");
+            string input2 = Console.ReadLine();
+
+            Console.WriteLine(input1.CompareTo(input2));
+            Console.WriteLine(string.Compare(input1, input2));
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Concatination()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tConcatination String Fuction");
+
+            Console.Write("\nEnter First String to Concatinate:");
+            string input1 = Console.ReadLine();
+            Console.Write("\nEnter Second String to Concatinate : ");
+            string input2 = Console.ReadLine();
+
+            Console.WriteLine(string.Concat(input1, input2));
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Copy()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tCopy String Function");
+
+            Console.Write("\nEnter a String to Copy :");
+            string input1 = Console.ReadLine();
+            string input2;
+
+            input2 = string.Copy(input1);
+
+            Console.WriteLine(input2);
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void SubString()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tSubstring Function");
+
+            Console.Write("\nEnter String to create Substring:");
+            string input1 = Console.ReadLine();
+
+            Console.Write("\nEnter a number from which the string is to be shown :\n");
+            int num = 0;
+            try
+            {
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.Write("Incorrect Number Entered\n\t\t\tRetry Again");
+                Console.ReadLine();
+                SubString();
+            }
+
+            Console.WriteLine(input1.Substring(num));
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Trim()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tTrim String Function");
+
+            Console.Write("\nEnter a String with Special Characters :");
+            string input1 = Console.ReadLine();
+            Console.Write("\nEnter the Character which is to be removed from from the above entered string : ");
+            char character = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine(input1.Trim(character));
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Insert()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tInser String Function");
+
+            Console.Write("\nEnter First String :");
+            string input1 = Console.ReadLine();
+            Console.Write("\nEnter Second String to insert : ");
+            string input2 = Console.ReadLine();
+            Console.Write("\nEnter a number from which the Second String is to be inserted :\n");
+            int num = 0;
+            try
+            {
+                num = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.Write("Incorrect Number Entered\n\t\t\tRetry Again");
+                Console.ReadLine();
+                Insert();
+            }
+            
+            Console.WriteLine(input1.Insert(num,input2));
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Split()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tSplit String Function");
+
+            Console.Write("\nEnter a String : ");
+            string input = Console.ReadLine();
+
+            Console.Write("\nEnter a character which is to be split : ");
+            char chr = Convert.ToChar(Console.ReadLine());
+            object[] array = input.Split(chr);
+
+            Console.WriteLine(array);
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Join()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tJoin String Function");
+
+            Console.Write("\nEnter First String : ");
+            string input = Console.ReadLine();
+
+            Console.Write("\nEnter Second String : ");
+            string input1 = Console.ReadLine();
+
+            object[] array = {input,input1};
+
+            Console.WriteLine(array);
+
+            Console.ReadLine();
+            Main();
+        }
+
+        public static void Exit()
+        {
+            Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+            string c = Console.ReadLine();
+            if (c == "a" || c == "A")
+            {
+                // Redirects the control back to the start of the Main() method of the project
+                Main();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        public static void Main()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tString Functions");
+            Console.Write("\n1. Compare Function\n2. Concatination Function\n3. Copy Function\n4. Substring Function\n5. Trim Function\n6. Insert");
+            Console.Write("\n7. Split\n8. Join\n");
+            string ipt = Console.ReadLine();
+
+            int input = 0;
+            try
+            {
+                int.TryParse(ipt, out input);
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided\nTry Again");
+                Console.ReadLine();
+                Main();
+            }
+
+            switch(input)
+            {
+                case 1:
+                    Compare();
+                    break;
+
+                case 2:
+                    Concatination();
+                    break;
+
+                case 3:
+                    Copy();
+                    break;
+
+                case 4:
+                    SubString();
+                    break;
+
+                case 5:
+                    Trim();
+                    break;
+
+                case 6:
+                    Insert();
+                    break;
+
+                case 7:
+                    Split();
+                    break;
+
+                case 8:
+                    Join();
+                    break;
+
+                default:
+                    Exit();
+                    break;
+            }
+
+        }
+    }
 }

@@ -32,13 +32,23 @@ namespace Main_Console_Application
             Console.WriteLine("\n  Select Any of the Following Function :");
             Console.WriteLine("\n_________________________________________");
             Console.WriteLine("\n1. Operators\n2. Constructor Examples\n3. Miscellaneous Projects\n4. Exception Handling");
+            Console.WriteLine("5. String Functions");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
             string userinput = Console.ReadLine();
-            int convertedint;
-            // Following converts string into an integer
-            Int32.TryParse(userinput, out convertedint);
+            int convertedint = 0;
+            try
+            {
+                // Following converts string into an integer
+                Int32.TryParse(userinput, out convertedint);
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input\nTry Again");
+                Console.ReadLine();
+                Main();
+            }
 
             //Following code is used to create menu-driven program
             switch (convertedint)
@@ -57,6 +67,10 @@ namespace Main_Console_Application
 
                 case 4:
                     Project_Library.Except.Main(); ;
+                    break;
+
+                case 5:
+                    Project_Library.StringFuctions.Main();
                     break;
 
                 default:
