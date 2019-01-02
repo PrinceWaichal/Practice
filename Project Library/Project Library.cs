@@ -2025,7 +2025,10 @@ namespace Project_Library
             char chr = Convert.ToChar(Console.ReadLine());
             object[] array = input.Split(chr);
 
-            Console.WriteLine(array);
+            foreach(string word in array)
+            {
+                Console.WriteLine(word);
+            }
 
             Console.ReadLine();
             Main();
@@ -2043,9 +2046,12 @@ namespace Project_Library
             Console.Write("\nEnter Second String : ");
             string input1 = Console.ReadLine();
 
-            object[] array = {input,input1};
+            string[] collection = { input, input1 };
 
-            Console.WriteLine(array);
+            Console.Write("\nEnter a character by which the above entered strings are to be joined / combined : ");
+            string chr = Console.ReadLine();
+
+            Console.WriteLine(string.Join(chr,collection));
 
             Console.ReadLine();
             Main();
@@ -2125,7 +2131,208 @@ namespace Project_Library
                     Exit();
                     break;
             }
+        }
+    }
 
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+    // <---------------------------------------------************************************************************-------------------------------------------->
+
+    public class MathFunctions
+    {
+        public static void Mini()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tMinimum Number Function");
+
+            Console.Write("\nEnter a Number : ");
+            double num1 = 0;
+            try
+            {
+                num1 = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nTry Again.");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.Write("\nEnter Second Number : ");
+            double num2 = 0;
+            try
+            {
+                num2 = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nTry Again.");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.WriteLine("\nSmallest Number Entered Is : " + Math.Min(num1, num2));
+
+            Console.ReadLine();
+        }
+
+        public static void Maxi()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tMaximium Number Function");
+
+            Console.Write("\nEnter First Number : ");
+            double number = 0;
+             try
+            {
+                number = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Again!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.Write("\nEnter Second Number : ");
+            double num = 0;
+            try
+            {
+                num = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Again!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.WriteLine("\nMaximum Number Entered is : " + Math.Max(number, num));
+
+            Console.ReadLine();
+        }
+
+        public static void Powered()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tPower Function");
+
+            Console.Write("\nProvide a Base Number : ");
+            double @base = 0;
+            try
+            {
+                @base = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Again!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.Write("\nEnter the Exponential : ");
+            int expo = 0;
+            try
+            {
+                expo = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Again!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.WriteLine("\nThe Power {1} to {0} is : " + Math.Pow(@base, expo), expo, @base);
+
+            Console.ReadLine();
+        }
+
+        public static void SquareRoot()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tSquare Root Function");
+
+            Console.ReadLine();
+        }
+
+        public static void TrignometricFunctions()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tTrignometric Functions");
+
+            Console.ReadLine();
+        }
+
+        public static void Exit()
+        {
+            Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+            string c = Console.ReadLine();
+            if (c == "a" || c == "A")
+            {
+                // Redirects the control back to the start of the Main() method of the project
+                Main();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+        
+
+        public static void Main()
+        {
+            Console.Clear();
+
+            Console.WriteLine("\n\t\t\tMathematical Functions of the .NET Library");
+            Console.Write("\nPlease Select any of the following Mathematical Function : ");
+            Console.Write("\n1. Minimum Number\n2. Maximum Number\n3. Power\n4. Square Root\n5. Trignometric Functions\n");
+            
+            string ipt = Console.ReadLine();
+            int input = 0;
+
+            try
+            {
+                int.TryParse(ipt, out input);
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Again");
+                Console.ReadLine();
+                Main();
+            }
+
+            switch(input)
+            {
+                case 1:
+                    Mini();
+                    break;
+
+                case 2:
+                    Maxi();
+                    break;
+
+                case 3:
+                    Powered();
+                    break;
+
+                case 4:
+                    SquareRoot();
+                    break;
+
+                case 5:
+                    TrignometricFunctions();
+                    break;
+
+                default:
+                    Exit();
+                    break;
+            }
         }
     }
 }

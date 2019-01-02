@@ -30,9 +30,9 @@ namespace Main_Console_Application
             Console.WriteLine("\n\t<--------------------------------------------->");
             //Creating a list to Select from
             Console.WriteLine("\n  Select Any of the Following Function :");
-            Console.WriteLine("\n_________________________________________");
-            Console.WriteLine("\n1. Operators\n2. Constructor Examples\n3. Miscellaneous Projects\n4. Exception Handling");
-            Console.WriteLine("5. String Functions");
+            Console.WriteLine("\n_________________________________________\n");
+            Console.WriteLine("1. Operators\n2. Constructor Examples\n3. Miscellaneous Projects\n4. Exception Handling");
+            Console.WriteLine("5. String Functions\n6. Math Functions");
             Console.WriteLine("\nPress Any Other Key to Exit the Console Application.");
 
             //Accepting a normal string
@@ -71,6 +71,10 @@ namespace Main_Console_Application
 
                 case 5:
                     Project_Library.StringFuctions.Main();
+                    break;
+
+                case 6:
+                    Project_Library.MathFunctions.Main();
                     break;
 
                 default:
