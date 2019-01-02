@@ -2257,6 +2257,21 @@ namespace Project_Library
 
             Console.WriteLine("\n\t\t\tSquare Root Function");
 
+            Console.Write("\nEnter a Number : ");
+            double number = 0;
+            try
+            {
+                number = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Provided.\nKindly Try Agian!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.WriteLine("Square Root of {0} is : " + Math.Sqrt(number), number);
+
             Console.ReadLine();
         }
 
@@ -2265,6 +2280,31 @@ namespace Project_Library
             Console.Clear();
 
             Console.WriteLine("\n\t\t\tTrignometric Functions");
+            Console.Write("\nEnter a Number : ");
+            double number = 0;
+
+            try
+            {
+                number = Convert.ToDouble(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("\nWrong Input Entered.\nKindly Try Again!!!!");
+                Console.ReadLine();
+                Main();
+            }
+
+            Console.WriteLine(Math.Abs(number));
+            Console.WriteLine(Math.Acos(number));
+            Console.WriteLine(Math.Asin(number));
+            Console.WriteLine(Math.Atan(number));
+            Console.WriteLine(Math.Cos(number));
+            Console.WriteLine(Math.Cosh(number));
+            Console.WriteLine(Math.Log(number));
+            Console.WriteLine(Math.Sin(number));
+            Console.WriteLine(Math.Sinh(number));
+            Console.WriteLine(Math.Tan(number));
+            Console.WriteLine(Math.Tanh(number));
 
             Console.ReadLine();
         }
