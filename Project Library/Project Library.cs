@@ -1597,6 +1597,49 @@ namespace Project_Library
             Main();
         }
 
+        public static class DateTime
+        {
+            public static void Exit()
+            {
+                Console.WriteLine("\n\nDo you wish to \na. Continue the Program\n\nb. Exit the Program");
+                string c = Console.ReadLine();
+                if (c == "a" || c == "A")
+                {
+                    // Redirects the control back to the start of the Main() method of the project
+                    Misc_Proj.Main();
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
+            }
+
+            public static void ToDay()
+            {
+
+            }
+
+            public static void YesTerDay()
+            {
+
+            }
+
+            public static void TomoRrow()
+            {
+
+            }
+
+            public static void TimeZone()
+            {
+
+            }
+
+            public static void Main()
+            {
+
+            }
+        }
+
         public static void Main()
         {
             Console.Clear();
