@@ -1616,27 +1616,80 @@ namespace Project_Library
 
             public static void ToDay()
             {
-
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tToday Program");
+                Console.Write("\nToday is : " + );
+                Console.ReadLine();
+                Main();
             }
 
             public static void YesTerDay()
             {
-
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tYesterday Program");
+                Console.ReadLine();
+                Main();
             }
 
             public static void TomoRrow()
             {
-
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tTomorrow Program");
+                Console.ReadLine();
+                Main();
             }
 
             public static void TimeZone()
             {
-
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tTime Zone Program");
+                Console.ReadLine();
+                Main();
             }
 
             public static void Main()
             {
+                Console.Clear();
+                Console.WriteLine("\n\t\t\tDateTime Programs of C#");
+                Console.WriteLine("\nPlease Select Any of the following:");
+                Console.Write("\n1. Today\n2. Tomorrow\n3. Yesterday\n4. Time Zone\n");
 
+                string num = Console.ReadLine();
+                int input = 0;
+                try
+                {
+                    int.TryParse(num, out input);
+                }
+                catch
+                {
+                    Console.WriteLine("\nSorry, wrong input provded.\n\t\t\tKindly try Again!!!!");
+                    Console.ReadLine();
+                    Main();
+                }
+
+                switch(input)
+                {
+                    case 1:
+                        ToDay();
+                        break;
+
+                    case 2:
+                        TomoRrow();
+                        break;
+
+                    case 3:
+                        YesTerDay();
+                        break;
+
+                    case 4:
+                        TimeZone();
+                        break;
+
+                    default:
+                        Console.WriteLine("\nSorry, wrong input provided.\nt\t\t\tKindly Try Again!!!");
+                        Main();
+                        break;
+                }
             }
         }
 
@@ -1646,7 +1699,7 @@ namespace Project_Library
             Console.WriteLine("\nSelect Any of the Following Projects");
             Console.WriteLine("1. Percentage of Student\n2. Area of a Circle\n3. Number of Digits");
             Console.WriteLine("4. Maximum Number\n5. Palindrome\n6. Odd Even Numbers\n7. Prime Number");
-            Console.WriteLine("8. Range of a Number\n9. Factorial of a Number\n10. Arrays");
+            Console.WriteLine("8. Range of a Number\n9. Factorial of a Number\n10. Arrays\n11. Date & Time");
 
             string input = Console.ReadLine();
             int menunum;
@@ -1692,6 +1745,10 @@ namespace Project_Library
 
                 case 10:
                     Arrays.Main();
+                    break;
+
+                case 11:
+                    DateTime.Main();
                     break;
 
                 default:
